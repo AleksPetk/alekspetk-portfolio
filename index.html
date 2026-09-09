@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- TODO: Finalize meta description once About content is approved -->
+    <title>Aleksandar Petkov — Software Developer</title>
+    <meta
+      name="description"
+      content="TODO: Final meta description for alekspetk.com — professional software developer portfolio."
+    />
+
+    <!-- TODO: Set production canonical when domain is live -->
+    <link rel="canonical" href="https://alekspetk.com/" />
+
+    <!-- Open Graph placeholders — finalize in Phase 14 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alekspetk.com/" />
+    <meta property="og:title" content="Aleksandar Petkov — Software Developer" />
+    <meta
+      property="og:description"
+      content="TODO: Final Open Graph description."
+    />
+    <meta property="og:image" content="TODO: /assets/images/misc/og-image.jpg" />
+
+    <meta name="theme-color" content="#0b0f17" />
+    <!-- TODO: Replace with real favicon assets -->
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/hero/hero-cinematic.webp"
+      type="image/webp"
+    />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="page">
+      <header class="site-header" data-site-header>
+        <div class="site-header__inner">
+          <a class="brand" href="index.html" aria-label="AP — Home">AP</a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-controls="site-nav"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <span class="nav-toggle__icon" aria-hidden="true"></span>
+          </button>
+
+          <nav class="nav" id="site-nav" data-nav aria-label="Primary">
+            <ul class="nav__list">
+              <li><a class="nav__link" href="#work">Work</a></li>
+              <li><a class="nav__link" href="#about">About</a></li>
+              <li><a class="nav__link" href="#skills">Skills</a></li>
+              <li><a class="nav__link" href="#contact">Contact</a></li>
+              <!-- TODO: Link to real resume PDF when available (see docs/CONTENT_AND_LINKS.md) -->
+              <li>
+                <a
+                  class="nav__link nav__link--resume"
+                  href="assets/documents/resume/"
+                  >Resume</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-header__edge" aria-hidden="true">
+          <span class="site-header__edge-line"></span>
+          <span class="site-header__edge-glow"></span>
+        </div>
+      </header>
+
+      <main id="main" class="page__main">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero__backdrop" aria-hidden="true"></div>
+          <div class="hero__overlay" aria-hidden="true"></div>
+          <div
+            class="hero__skills"
+            data-hero-skills
+            aria-hidden="true"
+            role="presentation"
+          ></div>
+          <div class="container hero__inner">
+            <div class="hero__content">
+              <p class="hero__eyebrow">Software Developer / Product Builder</p>
+              <h1 id="hero-title" class="hero__title">
+                <span>Aleksandar</span>
+                <span>Petkov</span>
+              </h1>
+              <p class="hero__lead">
+                I design and build software products for web, mobile, and
+                desktop.
+              </p>
+              <div class="btn-group hero__actions">
+                <a class="btn btn--primary" href="#work">
+                  View My Work
+                  <span class="btn__arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="btn btn--secondary" href="#contact">Get In Touch</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURED PROJECTS — Phase 2 -->
+        <section id="work" class="section work" aria-labelledby="work-heading">
+          <div class="container">
+            <header class="section__header" data-reveal>
+              <p class="section__label">Selected work</p>
+              <h2 id="work-heading" class="section__heading">
+                Featured Projects
+              </h2>
+              <p class="section__intro">
+                Large showcase sections for completed products — not a card
+                grid. Content and imagery land in later phases.
+              </p>
+            </header>
+
+            <article
+              class="project-showcase"
+              aria-labelledby="project-checkstation"
+              data-reveal
+            >
+              <div class="project-showcase__meta">
+                <p class="project-showcase__number">01</p>
+                <h3 id="project-checkstation" class="project-showcase__title">
+                  CheckStation
+                </h3>
+                <!-- TODO: Approved short description -->
+                <p class="project-showcase__desc">
+                  Description pending. See docs/CONTENT_AND_LINKS.md.
+                </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li class="tag">TODO: tags</li>
+                </ul>
+                <div class="project-showcase__actions">
+                  <a class="btn btn--primary" href="projects/checkstation.html"
+                    >View Project</a
+                  >
+                  <!-- Live / store links: only when KNOWN in CONTENT_AND_LINKS.md -->
+                </div>
+              </div>
+              <div class="project-showcase__media">
+                <div
+                  class="media-placeholder media-placeholder--wide"
+                  role="img"
+                  aria-label="CheckStation media placeholder"
+                >
+                  <p class="media-placeholder__label">
+                    CheckStation image placeholder
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-showcase project-showcase--reverse"
+              aria-labelledby="project-quickcal"
+              data-reveal
+            >
+              <div class="project-showcase__meta">
+                <p class="project-showcase__number">02</p>
+                <h3 id="project-quickcal" class="project-showcase__title">
+                  QuickCal
+                </h3>
+                <p class="project-showcase__desc">
+                  Description pending. See docs/CONTENT_AND_LINKS.md.
+                </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li class="tag">TODO: tags</li>
+                </ul>
+                <div class="project-showcase__actions">
+                  <a class="btn btn--primary" href="projects/quickcal.html"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+              <div class="project-showcase__media">
+                <div
+                  class="media-placeholder media-placeholder--wide"
+                  role="img"
+                  aria-label="QuickCal media placeholder"
+                >
+                  <p class="media-placeholder__label">
+                    QuickCal image placeholder
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-showcase"
+              aria-labelledby="project-game-of-night"
+              data-reveal
+            >
+              <div class="project-showcase__meta">
+                <p class="project-showcase__number">03</p>
+                <h3 id="project-game-of-night" class="project-showcase__title">
+                  Game of Night
+                </h3>
+                <p class="project-showcase__desc">
+                  Description pending. See docs/CONTENT_AND_LINKS.md.
+                </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li class="tag">TODO: tags</li>
+                </ul>
+                <div class="project-showcase__actions">
+                  <a
+                    class="btn btn--primary"
+                    href="projects/game-of-night.html"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+              <div class="project-showcase__media">
+                <div
+                  class="media-placeholder media-placeholder--wide"
+                  role="img"
+                  aria-label="Game of Night media placeholder"
+                >
+                  <p class="media-placeholder__label">
+                    Game of Night image placeholder
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ABOUT — Phase 3 -->
+        <section id="about" class="section about" aria-labelledby="about-heading">
+          <div class="container">
+            <header class="section__header" data-reveal>
+              <p class="section__label">About</p>
+              <h2 id="about-heading" class="section__heading">About</h2>
+            </header>
+            <div class="about__body" data-reveal>
+              <p class="about__text">
+                About copy pending approval. Do not invent biography,
+                experience years, or employer claims.
+              </p>
+              <p class="todo-note">
+                Phase 3: write concise, recruiter-ready About content. Track
+                facts in <code>docs/CONTENT_AND_LINKS.md</code>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKILLS — Phase 3 -->
+        <section
+          id="skills"
+          class="section skills"
+          aria-labelledby="skills-heading"
+        >
+          <div class="container">
+            <header class="section__header" data-reveal>
+              <p class="section__label">Capabilities</p>
+              <h2 id="skills-heading" class="section__heading">
+                Skills / Technologies
+              </h2>
+              <p class="section__intro">
+                Structured skill groups will be added after content review —
+                only list technologies actually used.
+              </p>
+            </header>
+            <div class="skills__groups" data-reveal>
+              <div class="skills__group">
+                <h3>TODO: Group</h3>
+                <ul class="tag-list">
+                  <li class="tag">Pending</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT — Phase 4 -->
+        <section
+          id="contact"
+          class="section contact"
+          aria-labelledby="contact-heading"
+        >
+          <div class="container">
+            <div class="contact__panel" data-reveal>
+              <p class="section__label">Contact</p>
+              <h2 id="contact-heading" class="contact__heading">
+                Let’s connect
+              </h2>
+              <p class="contact__text">
+                Contact details pending. Email and social links will be added
+                only when listed as KNOWN in the content tracker.
+              </p>
+              <div class="btn-group">
+                <!-- TODO: mailto: when email is KNOWN -->
+                <a class="btn btn--primary" href="#contact">Get In Touch</a>
+              </div>
+              <p class="todo-note">
+                Phase 4 + Phase 10: wire real email, LinkedIn, GitHub, resume.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div>
+            <p class="site-footer__brand">AP</p>
+            <p class="site-footer__meta">
+              Aleksandar Petkov — Software Developer
+            </p>
+          </div>
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/hero-skills.js" defer></script>
+    <script src="js/project.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

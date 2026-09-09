@@ -1,0 +1,74 @@
+/* ==========================================================================
+   variables.css — Design tokens for dark cinematic professional portfolio
+   Keep this list focused. Do not create hundreds of variables.
+   ========================================================================== */
+
+:root {
+  /* Colors — foundation */
+  --color-bg: #0b0f17;
+  --color-bg-soft: #101722;
+  --color-surface: #151c29;
+  --color-surface-secondary: #1a2333;
+  --color-text: #f4f6fa;
+  --color-text-muted: #9aa3b5;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-blue: #4d8dff;
+  --color-purple: #6b5cff;
+  --color-glow: rgba(77, 141, 255, 0.22);
+
+  /* Semantic aliases */
+  --color-focus: var(--color-blue);
+  --color-overlay: rgba(11, 15, 23, 0.72);
+
+  /* Layout */
+  --container-max: 1120px;
+  --container-narrow: 720px;
+  --page-gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-space: clamp(4.5rem, 10vw, 8rem);
+  --header-height: 4.25rem;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Typography scale */
+  --font-sans: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: clamp(1.75rem, 3vw, 2.25rem);
+  --text-3xl: clamp(2.25rem, 5vw, 3.5rem);
+  --text-hero: clamp(2.7rem, 8.4vw, 5.85rem);
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.14em;
+
+  /* Radius scale — restrained */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 450ms;
+
+  /* Z-index */
+  --z-header: 100;
+  --z-overlay: 200;
+}

@@ -1,0 +1,27 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local / env (none expected for static site; keep hygiene)
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# Optional local originals (keep web-optimized assets in repo)
+assets/_originals/
+assets/originals/
+
+# Temporary
+tmp/
+temp/
+.cache/

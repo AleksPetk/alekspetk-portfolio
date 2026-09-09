@@ -1,0 +1,315 @@
+/* ==========================================================================
+   home.css — Homepage section layouts
+   Phase 1: Full-width cinematic hero background composition
+   ========================================================================== */
+
+/* Hero — full-bleed cinematic backdrop */
+.hero {
+  --hero-bg-image: url("../assets/images/hero/hero-cinematic.webp");
+  --hero-bg-position: 72% center;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: clamp(34rem, 88vh, 52rem);
+  padding-top: clamp(1.75rem, 5vh, 3.25rem);
+  padding-bottom: clamp(3.5rem, 8vh, 5.5rem);
+  isolation: isolate;
+  z-index: 0;
+  background-color: var(--color-bg);
+  background-image: var(--hero-bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: var(--hero-bg-position);
+}
+
+/* Layer 0 — cinematic image plate */
+.hero__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--color-bg);
+  background-image: var(--hero-bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: var(--hero-bg-position);
+  pointer-events: none;
+}
+
+/* Layer 1 — readability / vignette overlays */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    /* Soft left wash — image remains visible under text, no hard column */
+    linear-gradient(
+      105deg,
+      rgba(7, 10, 16, 0.78) 0%,
+      rgba(7, 10, 16, 0.64) 30%,
+      rgba(7, 10, 16, 0.4) 48%,
+      rgba(7, 10, 16, 0.16) 62%,
+      rgba(7, 10, 16, 0.04) 74%,
+      transparent 88%
+    ),
+    /* top darkening for header contrast */
+    linear-gradient(
+      180deg,
+      rgba(8, 11, 18, 0.5) 0%,
+      rgba(8, 11, 18, 0.16) 18%,
+      transparent 38%
+    ),
+    /* bottom fade into page background */
+    linear-gradient(
+      0deg,
+      rgba(11, 15, 23, 1) 0%,
+      rgba(11, 15, 23, 0.72) 18%,
+      rgba(11, 15, 23, 0.2) 42%,
+      transparent 68%
+    );
+}
+
+/* Layer 2 — skill ribbon in lower hero band (above overlays, below copy) */
+.hero__skills {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: clamp(1.25rem, 3.5vh, 2.75rem);
+  height: clamp(5.5rem, 22vh, 10.5rem);
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+  /* Soft L/R dissolve — narrow fades at the true edges only */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 5%,
+    #000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 5%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.hero-skill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 3.6vw, 3.35rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  white-space: nowrap;
+  color: #e8eef8;
+  opacity: 0;
+  will-change: transform, opacity;
+  user-select: none;
+  pointer-events: none;
+}
+
+.hero-skill--accent {
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #f4f7fc;
+}
+
+/* Layer 3 — main hero content above skill words */
+.hero__inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: flex-start;
+  width: min(100% - (var(--page-gutter) * 2), var(--container-max));
+  margin-inline: auto;
+  flex: 1 1 auto;
+  overflow: visible;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  /* Overlay text on the cinematic field — not a side column */
+  width: min(100%, 56vw, 46rem);
+  max-width: none;
+  padding-top: clamp(0.5rem, 2vh, 1.5rem);
+  overflow: visible;
+  animation: hero-enter 0.85s var(--ease-out) both;
+}
+
+.hero__eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: #b4becf;
+}
+
+.hero__title {
+  position: relative;
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  width: max-content;
+  max-width: none;
+  overflow: visible;
+  color: #f5f8fc;
+  -webkit-text-fill-color: #f5f8fc;
+  background: none;
+  text-overflow: unset;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12),
+    0 2px 8px rgba(3, 8, 18, 0.85),
+    0 0 32px rgba(8, 11, 18, 0.55);
+}
+
+.hero__title span {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero__lead {
+  margin-top: var(--space-1);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  color: #a7b1c4;
+  max-width: 28rem;
+  text-wrap: pretty;
+  text-shadow: 0 1px 12px rgba(8, 11, 18, 0.55);
+}
+
+.hero__actions {
+  margin-top: var(--space-3);
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.85rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__content {
+    animation: none;
+  }
+}
+
+/* Featured work */
+.work {
+  border-top: 1px solid transparent;
+}
+
+/* About */
+.about__body {
+  display: grid;
+  gap: var(--space-6);
+  max-width: 42rem;
+}
+
+.about__text {
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+}
+
+/* Skills */
+.skills__groups {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.skills__group h3 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+/* Contact / pre-footer CTA */
+.contact {
+  border-top: 1px solid var(--color-border);
+}
+
+.contact__panel {
+  display: grid;
+  gap: var(--space-5);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(77, 141, 255, 0.08), transparent 50%),
+    var(--color-surface);
+}
+
+.contact__heading {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 650;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+}
+
+.contact__text {
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+  max-width: 34rem;
+}
+
+/* 404 */
+.page-404 {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - var(--header-height));
+  padding: var(--section-space) var(--page-gutter);
+  text-align: center;
+}
+
+.page-404__inner {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: center;
+  max-width: 28rem;
+}
+
+.page-404__code {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.page-404__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: var(--leading-tight);
+}
+
+.page-404__text {
+  color: var(--color-text-muted);
+}
