@@ -48,9 +48,9 @@ Reuse homepage `.site-footer` structure and dark styling. Links back to homepage
 
 Do **not** invent project-specific Resume menus. Every page uses the identical header Resume control:
 
-- English — English CV — View / Download → `aleksandar-petkov-cv-en.pdf`
-- Japanese — 履歴書 — View / Download → `aleksandar-petkov-rirekisho-ja.pdf`
-- Japanese — 職務経歴書 — View / Download → `aleksandar-petkov-shokumukeirekisho-ja.pdf`
+- English — English CV — View → `/cv/en/` · Download → `aleksandar-petkov-cv-en.pdf`
+- Japanese — 履歴書 — View → `/cv/ja/rirekisho/` · Download → `aleksandar-petkov-rirekisho-ja.pdf`
+- Japanese — 職務経歴書 — View → `/cv/ja/shokumukeirekisho/` · Download → `aleksandar-petkov-shokumukeirekisho-ja.pdf`
 - View: new tab · Download: `download` attribute
 - Closes on outside click + Escape; keyboard accessible
 - PDFs may be missing until provided — keep paths ready; do not add fake PDF files

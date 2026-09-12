@@ -16,7 +16,7 @@ Persistent orientation and navigation without stealing focus from the hero.
 
 - Left: **AP** (home link)
 - Right: Work, About, Skills, Contact, Resume
-- Resume: shared English / Japanese dropdown (English CV + 履歴書 + 職務経歴書; View opens PDF in new tab; Download uses `download`)
+- Resume: shared English / Japanese dropdown (View opens `/cv/en/`, `/cv/ja/rirekisho/`, `/cv/ja/shokumukeirekisho/`; Download uses the PDF `download` attribute)
 - Mobile: toggle button + expandable nav
 
 ### Layout intention

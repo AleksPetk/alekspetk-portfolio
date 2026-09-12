@@ -45,7 +45,7 @@ Use before marking a phase complete or before application submission (Phase 18).
 - [ ] Project page links resolve
 - [ ] Next-project links resolve (only on pages that still include them)
 - [ ] Resume menu offers English CV + 履歴書 + 職務経歴書 View/Download
-- [ ] Resume View opens PDF in a new tab; Download uses the download attribute
+- [ ] Resume View opens the clean CV page (`/cv/en/`, `/cv/ja/rirekisho/`, `/cv/ja/shokumukeirekisho/`); Download uses the download attribute
 - [ ] Resume menu closes on outside click and Escape
 - [ ] External links (when present) use real KNOWN URLs
 - [ ] Contact Get In Touch opens email chooser (Default / Gmail / Outlook)

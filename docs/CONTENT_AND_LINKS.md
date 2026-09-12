@@ -28,7 +28,7 @@ When a value becomes known, update this file **before** or **with** the HTML cha
 | Positioning | KNOWN | Software Developer / Product Builder |
 | Hero supporting line | KNOWN | I design and build software products for web, mobile, and desktop. |
 | Contact CTA | KNOWN | Get In Touch → mailto (no contact form) |
-| Resume UI | KNOWN | Global Resume menu: English CV + 履歴書 + 職務経歴書 (View / Download) |
+| Resume UI | KNOWN | Global Resume menu: View → `/cv/en/`, `/cv/ja/rirekisho/`, `/cv/ja/shokumukeirekisho/` (noindex); Download still uses the PDF files |
 
 ---
 
