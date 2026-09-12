@@ -20,7 +20,7 @@ When a value becomes known, update this file **before** or **with** the HTML cha
 | Resume PDF path | KNOWN | English CV: `assets/documents/resume/aleksandar-petkov-cv-en.pdf` · 履歴書: `…/aleksandar-petkov-rirekisho-ja.pdf` · 職務経歴書: `…/aleksandar-petkov-shokumukeirekisho-ja.pdf` |
 | Contact phone | TODO | (only if intentionally published) |
 | Site domain | KNOWN | `alekspetk.com` (custom domain wiring is a later phase) |
-| Meta description (home) | KNOWN | Aleksandar Petkov — software developer and product builder… (see `index.html`) |
+| Meta description (home) | KNOWN | Portfolio of Aleksandar Petkov, a software developer in Japan focused on backend and full-stack work with Python, Django, React, and deployed web and mobile products. |
 | Canonical site URL | KNOWN | `https://alekspetk.com/` |
 | OG image | KNOWN | `https://alekspetk.com/assets/images/hero/hero-cinematic.webp` |
 | Full name | KNOWN | Aleksandar Petkov |
