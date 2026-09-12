@@ -43,9 +43,13 @@ Use before marking a phase complete or before application submission (Phase 18).
 
 - [ ] Internal anchors (`#work`, `#about`, `#skills`, `#contact`) work
 - [ ] Project page links resolve
-- [ ] Next-project links resolve
-- [ ] Resume link only points to a real file when available
+- [ ] Next-project links resolve (only on pages that still include them)
+- [ ] Resume menu offers English CV + 履歴書 + 職務経歴書 View/Download
+- [ ] Resume View opens PDF in a new tab; Download uses the download attribute
+- [ ] Resume menu closes on outside click and Escape
 - [ ] External links (when present) use real KNOWN URLs
+- [ ] Contact Get In Touch opens email chooser (Default / Gmail / Outlook)
+- [ ] Contact aside Resume opens the global Resume menu
 - [ ] 404 page returns home
 
 ## ACCESSIBILITY

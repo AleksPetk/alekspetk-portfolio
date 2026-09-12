@@ -7,17 +7,13 @@
     <title>Game of Night — Aleksandar Petkov</title>
     <meta
       name="description"
-      content="TODO: Final Game of Night project description for SEO."
+      content="Game of Night is not yet published on this portfolio."
     />
+    <meta name="robots" content="noindex, nofollow" />
     <link
       rel="canonical"
       href="https://alekspetk.com/projects/game-of-night.html"
     />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Game of Night — Aleksandar Petkov" />
-    <meta property="og:description" content="TODO: Final Open Graph description." />
-    <meta property="og:image" content="TODO: project OG image" />
 
     <meta name="theme-color" content="#0b0f17" />
     <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
@@ -50,18 +46,120 @@
 
           <nav class="nav" id="site-nav" data-nav aria-label="Primary">
             <ul class="nav__list">
-              <li><a class="nav__link" href="../index.html#work">Work</a></li>
+              <li><a class="nav__link" href="../index.html#work">Projects</a></li>
               <li><a class="nav__link" href="../index.html#about">About</a></li>
               <li><a class="nav__link" href="../index.html#skills">Skills</a></li>
               <li>
                 <a class="nav__link" href="../index.html#contact">Contact</a>
               </li>
-              <li>
-                <a
+              <li class="nav-resume" data-resume-menu>
+                <button
+                  type="button"
                   class="nav__link nav__link--resume"
-                  href="../assets/documents/resume/"
-                  >Resume</a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-controls="resume-menu"
+                  data-resume-toggle
                 >
+                  Resume
+                </button>
+                <div
+                  class="resume-menu"
+                  id="resume-menu"
+                  role="menu"
+                  aria-label="Resume options"
+                  hidden
+                  data-resume-panel
+                >
+                  <div class="resume-menu__section">
+                    <p class="resume-menu__section-label" id="resume-en-section">
+                      English
+                    </p>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-en-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-en-doc">
+                        English CV
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-cv-en.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-cv-en.pdf"
+                          download="Aleksandar-Petkov-CV-English.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resume-menu__section">
+                    <p class="resume-menu__section-label" id="resume-ja-section">
+                      Japanese
+                    </p>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-rirekisho-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-rirekisho-doc">
+                        履歴書
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-rirekisho-ja.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-rirekisho-ja.pdf"
+                          download="Aleksandar-Petkov-Rirekisho.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-shokumu-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-shokumu-doc">
+                        職務経歴書
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-shokumukeirekisho-ja.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-shokumukeirekisho-ja.pdf"
+                          download="Aleksandar-Petkov-Shokumukeirekisho.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </nav>
@@ -74,135 +172,19 @@
 
       <main id="main" class="page__main">
         <section class="project-hero" aria-labelledby="project-title">
-          <div class="container project-hero__grid">
-            <div class="project-hero__content">
-              <p class="project-hero__category">
-                <!-- TODO: category e.g. Game -->
-                Project type pending
-              </p>
-              <h1 id="project-title" class="project-hero__title">
-                Game of Night
-              </h1>
-              <p class="project-hero__desc">
-                Short description pending. Do not invent product claims. See
-                docs/CONTENT_AND_LINKS.md.
-              </p>
-              <p class="project-hero__status">Status: TODO</p>
-              <ul class="tag-list" aria-label="Technologies">
-                <li class="tag">TODO: tags</li>
-              </ul>
-              <div class="project-hero__actions">
-                <a class="btn btn--secondary" href="../index.html#work"
-                  >Back to work</a
-                >
-              </div>
-            </div>
-            <div>
-              <div
-                class="media-placeholder media-placeholder--wide"
-                role="img"
-                aria-label="Game of Night hero visual placeholder"
+          <div class="container">
+            <p class="section__label">Not published yet</p>
+            <h1 id="project-title" class="section__heading">Game of Night</h1>
+            <p class="section__intro">
+              This project page is not ready for public viewing. Explore the
+              shipped work on the homepage instead.
+            </p>
+            <div class="btn-group">
+              <a class="btn btn--primary" href="../index.html#work"
+                >View Projects</a
               >
-                <p class="media-placeholder__label">
-                  Game of Night hero media<br />
-                  assets/images/projects/game-of-night/
-                </p>
-              </div>
+              <a class="btn btn--secondary" href="../index.html">Home</a>
             </div>
-          </div>
-        </section>
-
-        <section class="project-section" aria-labelledby="overview-heading">
-          <div class="container">
-            <h2 id="overview-heading" class="project-section__heading">
-              Overview
-            </h2>
-            <div class="project-overview">
-              <div class="project-overview__item">
-                <h3>Problem</h3>
-                <p>TODO — approved copy only.</p>
-              </div>
-              <div class="project-overview__item">
-                <h3>Solution</h3>
-                <p>TODO — approved copy only.</p>
-              </div>
-              <div class="project-overview__item">
-                <h3>My role</h3>
-                <p>TODO — approved copy only.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-section" aria-labelledby="features-heading">
-          <div class="container">
-            <h2 id="features-heading" class="project-section__heading">
-              Features
-            </h2>
-            <div class="feature-list">
-              <div class="feature-list__item">
-                <h3>Feature title pending</h3>
-                <p>Feature copy pending.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-section" aria-labelledby="tech-heading">
-          <div class="container">
-            <h2 id="tech-heading" class="project-section__heading">
-              Tech stack
-            </h2>
-            <div class="tech-groups">
-              <div class="tech-groups__item">
-                <h3>TODO: Group</h3>
-                <ul class="tag-list">
-                  <li class="tag">Pending</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-section" aria-labelledby="gallery-heading">
-          <div class="container">
-            <h2 id="gallery-heading" class="project-section__heading">
-              Gallery
-            </h2>
-            <div class="gallery-grid">
-              <div
-                class="media-placeholder"
-                role="img"
-                aria-label="Screenshot placeholder"
-              >
-                <p class="media-placeholder__label">Screenshot placeholder</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-section" aria-labelledby="links-heading">
-          <div class="container">
-            <h2 id="links-heading" class="project-section__heading">Links</h2>
-            <div class="project-links">
-              <p class="todo-note">
-                Add stores, demos, or repositories only when marked KNOWN in
-                <code>docs/CONTENT_AND_LINKS.md</code>. Never invent URLs.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-section" aria-labelledby="next-heading">
-          <div class="container">
-            <h2 id="next-heading" class="sr-only">Next project</h2>
-            <a class="next-project" href="checkstation.html">
-              <div>
-                <p class="next-project__label">Next project</p>
-                <p class="next-project__title">CheckStation</p>
-              </div>
-              <span class="btn btn--secondary" aria-hidden="true">View</span>
-            </a>
           </div>
         </section>
       </main>
@@ -216,8 +198,9 @@
             </p>
           </div>
           <nav class="site-footer__nav" aria-label="Footer">
-            <a href="../index.html#work">Work</a>
+            <a href="../index.html#work">Projects</a>
             <a href="../index.html#about">About</a>
+            <a href="../index.html#skills">Skills</a>
             <a href="../index.html#contact">Contact</a>
           </nav>
         </div>
@@ -225,8 +208,6 @@
     </div>
 
     <script src="../js/navigation.js" defer></script>
-    <script src="../js/animations.js" defer></script>
-    <script src="../js/project.js" defer></script>
     <script src="../js/main.js" defer></script>
   </body>
 </html>

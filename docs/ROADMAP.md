@@ -81,38 +81,50 @@ Make the first viewport feel like a real custom portfolio composition.
 
 ## PHASE 2 — Featured Projects homepage sections
 
-**Status:** `[ ]`
+**Status:** `[~]` (structure + Japan47 skin in progress; other panels may still use default dark surface)
 
 ### Goal
 
-Build large cinematic homepage showcases for CheckStation, QuickCal, and Game of Night.
+Build large homepage project panels for featured products (currently CheckStation, QuickCal, Japan47).
 
 ### Work included
 
+- Shared `.work__panels` chrome: outer insets, vertical gaps, rounded corners
+- Shared `.project-showcase` skeleton (grid, media size, buttons, tags, spacing)
 - Alternating large horizontal showcases
-- Numbers, titles, placeholder descriptions/tags
+- Numbers, titles, descriptions/tags (KNOWN only)
 - Media placeholders sized for final imagery
 - Links to project detail pages
-- Spacing/hierarchy polish for `#work`
+- **Per-project visual skins** (same skeleton, different identity) — e.g. Japan47 cream/red editorial
 
 ### Explicitly NOT included
 
 - Final screenshots
 - Final marketing copy
 - Store/live links unless KNOWN
-- Full project detail page content
+- Full project detail page content (except when a separate phase/page task covers it)
+- Per-project redesign of showcase dimensions or layout
+
+### Rules (source of truth)
+
+See `DESIGN_DIRECTION.md` and `HOMEPAGE_PLAN.md`:
+
+- Same skeleton / different skin
+- Panel side inset + vertical gap + soft radius required
+- Homepage identity must preview the detail page
 
 ### Completion criteria
 
 - Not a three-card grid
-- Distinct large sections
+- Distinct large panels with breathing room from edges and each other
 - Clear path to each project page
+- Each panel recognizable as that product’s brand
 
 ---
 
 ## PHASE 3 — About + Skills
 
-**Status:** `[ ]`
+**Status:** `[x]`
 
 ### Goal
 
@@ -120,25 +132,26 @@ Add honest About and Skills sections with approved content only.
 
 ### Work included
 
-- About layout + approved short bio
-- Skills groups using real technologies only
+- About two-column layout + approved bio / At a glance — **done**
+- Compact Skills groups (Backend, Frontend, Mobile, Infrastructure, Services / Integrations) — **done**
 - Responsive stacking
 
 ### Explicitly NOT included
 
 - Invented experience years / employers / awards
 - Decorative skill bars that imply false proficiency metrics
+- Oversized skill cards that inflate section height
 
 ### Completion criteria
 
-- Content matches owner-approved facts
-- Section reads as professional and concise
+- About + Skills content matches owner-approved facts — **met**
+- Skills section stays compact and scannable — **met**
 
 ---
 
 ## PHASE 4 — Contact + Footer
 
-**Status:** `[ ]`
+**Status:** `[x]` (contact links + Resume menu + real CV PDFs shipped)
 
 ### Goal
 
@@ -146,19 +159,23 @@ Ship a strong contact/pre-footer CTA and consistent footer.
 
 ### Work included
 
-- Large contact CTA panel
+- Large contact CTA panel with real Email / GitHub / LinkedIn
+- Get In Touch opens email-app chooser (Default Mail App / Gmail / Outlook) for `work@alekspetk.com`
+- Global Resume EN/JA View + Download menu across all pages
+- Contact aside Resume reuses the global Resume menu
 - Footer consistency across pages
-- Placeholders ready for real email/social/resume links
 
 ### Explicitly NOT included
 
 - Contact forms requiring backends
 - Fake social proof
+- Shipping CV PDF binaries before they are provided
 
 ### Completion criteria
 
-- Clear next step for recruiters
-- Footer not noisy
+- Clear next step for recruiters — **met**
+- Footer not noisy — **met**
+- CV PDF files still TODO
 
 ---
 
@@ -189,7 +206,7 @@ Polish the shared project page template before filling project-specific content.
 
 ## PHASE 6 — CheckStation project page
 
-**Status:** `[ ]`
+**Status:** `[x]` (content + theme + links + optimized WebP screenshots shipped)
 
 ### Goal
 
@@ -197,26 +214,29 @@ Complete CheckStation detail content within known facts.
 
 ### Work included
 
-- Approved copy for overview/features/role
-- Tech stack listing
-- Link slots for known URLs only
-- Gallery slots prepared for assets
+- Substantial SaaS case study (`projects/checkstation.html` + `css/checkstation.css`)
+- Global header/footer preserved; light navy/blue SaaS theme scoped to main
+- Homepage showcase skin `.project-showcase--checkstation` (same structure)
+- Verified links: checkstation.app, workspace, docs, status
+- Three primary screenshot placeholders only
+- Live web status + separate IN DEVELOPMENT mobile/desktop section (no store/download claims)
 
 ### Explicitly NOT included
 
 - Invented URLs
-- Unapproved claims
+- Fake screenshots or released mobile/desktop claims
+- “Next project” section
 
 ### Completion criteria
 
 - Page is recruiter-usable with available truth
-- TODOs clearly marked where data is missing
+- Screenshot WebP files can drop into prepared slots later
 
 ---
 
 ## PHASE 7 — QuickCal project page
 
-**Status:** `[ ]`
+**Status:** `[x]` (content + theme + screenshots shipped)
 
 ### Goal
 
@@ -224,16 +244,22 @@ Complete QuickCal detail content within known facts.
 
 ### Work included
 
-- Same structural fill as Phase 6 for QuickCal
-- Mobile-app oriented presentation where appropriate
+- Compact mobile-oriented case study (`projects/quickcal.html` + `css/quickcal.css`)
+- Global header/footer preserved; theme scoped to main
+- Homepage showcase skin `.project-showcase--quickcal` (same structure)
+- Verified App Store + Google Play links
+- Phone screenshot placeholders prepared
 
 ### Explicitly NOT included
 
-- Fake store links
+- Website CTA (no web product)
+- “Next project” section
+- Invented cloud / social / AI / backend claims
 
 ### Completion criteria
 
-- Honest, complete-as-possible QuickCal page
+- Honest, complete-as-possible QuickCal page — **met**
+- Optimized phone WebP screenshots shipped on detail + homepage preview
 
 ---
 

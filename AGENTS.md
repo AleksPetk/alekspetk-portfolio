@@ -33,7 +33,12 @@ Also consult when needed:
 ## Hard rules
 
 - **Never redesign** unrelated areas or the whole site without explicit instruction
-- **Preserve** the agreed **dark cinematic professional** design direction
+- **Preserve** the agreed **dark cinematic professional** design direction for the site shell
+- **Preserve** identical **global header + footer** on every page (homepage and all project pages)
+- **Preserve** global Resume EN/JA menu behavior (do not invent per-project Resume UIs)
+- Contact uses real Email / GitHub / LinkedIn; Get In Touch is mailto only (no forms)
+- **Preserve** homepage project showcase **structure** (same skeleton); allow **project-specific skins** on panels / main content only
+- **Preserve** outer panel insets, vertical gaps, and soft rounded corners on Featured Project panels
 - **Preserve** the static / GitHub Pages architecture
 - **Never invent** facts, years of experience, stats, testimonials, clients, awards, or URLs
 - Keep scope **narrow** — one phase or one component at a time
@@ -41,6 +46,16 @@ Also consult when needed:
 - **Test after edits** (desktop, mobile, links, console)
 - **Report changed files** when done
 - **Update docs** when architecture or roadmap status changes
+
+## Homepage project panels (quick reference)
+
+- Same structure, media size, button size, spacing system for every project
+- Unique theme per project (background, accents, title type, etc.) is required when the product has a strong identity
+- Outer gaps + rounded corners are required — see `docs/HOMEPAGE_PLAN.md`
+- Do **not** redesign showcase dimensions per project
+- Detail page **main content** identity should continue the homepage panel identity
+- **Global header and footer are identical on all pages** (alekspetk.com shell) — project themes never restyle them
+- Examples: `.project-showcase--checkstation` ↔ `css/checkstation.css`; `.project-showcase--quickcal` ↔ `css/quickcal.css`; `.project-showcase--japan47` ↔ `css/japan47.css`
 
 ## Preferred task shape
 

@@ -4,29 +4,47 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- TODO: Finalize meta description once About content is approved -->
     <title>Aleksandar Petkov — Software Developer</title>
     <meta
       name="description"
-      content="TODO: Final meta description for alekspetk.com — professional software developer portfolio."
+      content="Aleksandar Petkov — software developer and product builder. Portfolio of shipped web, mobile, and desktop products including CheckStation, Japan47, and QuickCal."
     />
 
-    <!-- TODO: Set production canonical when domain is live -->
     <link rel="canonical" href="https://alekspetk.com/" />
 
-    <!-- Open Graph placeholders — finalize in Phase 14 -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alekspetk.com/" />
     <meta property="og:title" content="Aleksandar Petkov — Software Developer" />
     <meta
       property="og:description"
-      content="TODO: Final Open Graph description."
+      content="Software developer and product builder. Shipped web, mobile, and desktop products — CheckStation, Japan47, QuickCal."
     />
-    <meta property="og:image" content="TODO: /assets/images/misc/og-image.jpg" />
+    <meta
+      property="og:image"
+      content="https://alekspetk.com/assets/images/hero/hero-cinematic.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Aleksandar Petkov — Software Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Software developer and product builder. Shipped web, mobile, and desktop products."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alekspetk.com/assets/images/hero/hero-cinematic.webp"
+    />
 
     <meta name="theme-color" content="#0b0f17" />
-    <!-- TODO: Replace with real favicon assets -->
     <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Shippori+Mincho:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="preload"
       as="image"
@@ -62,17 +80,118 @@
 
           <nav class="nav" id="site-nav" data-nav aria-label="Primary">
             <ul class="nav__list">
-              <li><a class="nav__link" href="#work">Work</a></li>
+              <li><a class="nav__link" href="#work">Projects</a></li>
               <li><a class="nav__link" href="#about">About</a></li>
               <li><a class="nav__link" href="#skills">Skills</a></li>
               <li><a class="nav__link" href="#contact">Contact</a></li>
-              <!-- TODO: Link to real resume PDF when available (see docs/CONTENT_AND_LINKS.md) -->
-              <li>
-                <a
+              <li class="nav-resume" data-resume-menu>
+                <button
+                  type="button"
                   class="nav__link nav__link--resume"
-                  href="assets/documents/resume/"
-                  >Resume</a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-controls="resume-menu"
+                  data-resume-toggle
                 >
+                  Resume
+                </button>
+                <div
+                  class="resume-menu"
+                  id="resume-menu"
+                  role="menu"
+                  aria-label="Resume options"
+                  hidden
+                  data-resume-panel
+                >
+                  <div class="resume-menu__section">
+                    <p class="resume-menu__section-label" id="resume-en-section">
+                      English
+                    </p>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-en-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-en-doc">
+                        English CV
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="assets/documents/resume/aleksandar-petkov-cv-en.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="assets/documents/resume/aleksandar-petkov-cv-en.pdf"
+                          download="Aleksandar-Petkov-CV-English.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resume-menu__section">
+                    <p class="resume-menu__section-label" id="resume-ja-section">
+                      Japanese
+                    </p>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-rirekisho-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-rirekisho-doc">
+                        履歴書
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="assets/documents/resume/aleksandar-petkov-rirekisho-ja.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="assets/documents/resume/aleksandar-petkov-rirekisho-ja.pdf"
+                          download="Aleksandar-Petkov-Rirekisho.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-shokumu-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-shokumu-doc">
+                        職務経歴書
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="assets/documents/resume/aleksandar-petkov-shokumukeirekisho-ja.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="assets/documents/resume/aleksandar-petkov-shokumukeirekisho-ja.pdf"
+                          download="Aleksandar-Petkov-Shokumukeirekisho.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </nav>
@@ -87,12 +206,9 @@
         <section class="hero" aria-labelledby="hero-title">
           <div class="hero__backdrop" aria-hidden="true"></div>
           <div class="hero__overlay" aria-hidden="true"></div>
-          <div
-            class="hero__skills"
-            data-hero-skills
-            aria-hidden="true"
-            role="presentation"
-          ></div>
+          <div class="hero__skills" aria-hidden="true" role="presentation">
+            <div class="hero__skills-track" data-hero-skills></div>
+          </div>
           <div class="container hero__inner">
             <div class="hero__content">
               <p class="hero__eyebrow">Software Developer / Product Builder</p>
@@ -115,22 +231,24 @@
           </div>
         </section>
 
-        <!-- FEATURED PROJECTS — Phase 2 -->
+        <!-- Projects -->
         <section id="work" class="section work" aria-labelledby="work-heading">
           <div class="container">
             <header class="section__header" data-reveal>
-              <p class="section__label">Selected work</p>
+              <p class="section__label">Selected Projects</p>
               <h2 id="work-heading" class="section__heading">
-                Featured Projects
+                Projects I’ve Built
               </h2>
               <p class="section__intro">
-                Large showcase sections for completed products — not a card
-                grid. Content and imagery land in later phases.
+                A selection of products I’ve designed, built, and shipped across
+                web and mobile.
               </p>
             </header>
+          </div>
 
+          <div class="work__panels">
             <article
-              class="project-showcase"
+              class="project-showcase project-showcase--checkstation"
               aria-labelledby="project-checkstation"
               data-reveal
             >
@@ -139,35 +257,53 @@
                 <h3 id="project-checkstation" class="project-showcase__title">
                   CheckStation
                 </h3>
-                <!-- TODO: Approved short description -->
                 <p class="project-showcase__desc">
-                  Description pending. See docs/CONTENT_AND_LINKS.md.
+                  A configurable SaaS platform for attendance, self-service
+                  kiosks, and workspace activity tracking.
                 </p>
                 <ul class="tag-list" aria-label="Technologies">
-                  <li class="tag">TODO: tags</li>
+                  <li class="tag">Web</li>
+                  <li class="tag">SaaS</li>
+                  <li class="tag">Django</li>
+                  <li class="tag">React</li>
                 </ul>
                 <div class="project-showcase__actions">
                   <a class="btn btn--primary" href="projects/checkstation.html"
                     >View Project</a
                   >
-                  <!-- Live / store links: only when KNOWN in CONTENT_AND_LINKS.md -->
                 </div>
               </div>
               <div class="project-showcase__media">
                 <div
-                  class="media-placeholder media-placeholder--wide"
-                  role="img"
-                  aria-label="CheckStation media placeholder"
+                  class="media-placeholder media-placeholder--wide cs-home-preview"
                 >
-                  <p class="media-placeholder__label">
-                    CheckStation image placeholder
-                  </p>
+                  <div class="cs-home-browser">
+                    <div class="cs-home-browser__chrome" aria-hidden="true">
+                      <span class="cs-home-browser__dot"></span>
+                      <span class="cs-home-browser__dot"></span>
+                      <span class="cs-home-browser__dot"></span>
+                      <span class="cs-home-browser__url"
+                        >workspace.checkstation.app</span
+                      >
+                    </div>
+                    <div class="cs-home-browser__viewport">
+                      <img
+                        class="cs-home-browser__img"
+                        src="assets/images/projects/checkstation/checkstation-workspace.webp"
+                        width="1600"
+                        height="900"
+                        alt="CheckStation workspace dashboard preview"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
 
             <article
-              class="project-showcase project-showcase--reverse"
+              class="project-showcase project-showcase--reverse project-showcase--quickcal"
               aria-labelledby="project-quickcal"
               data-reveal
             >
@@ -177,10 +313,13 @@
                   QuickCal
                 </h3>
                 <p class="project-showcase__desc">
-                  Description pending. See docs/CONTENT_AND_LINKS.md.
+                  A fast offline-first calorie counter built around a personal
+                  food library and one-tap logging.
                 </p>
-                <ul class="tag-list" aria-label="Technologies">
-                  <li class="tag">TODO: tags</li>
+                <ul class="tag-list" aria-label="Platforms">
+                  <li class="tag">iOS</li>
+                  <li class="tag">Android</li>
+                  <li class="tag">Offline-first</li>
                 </ul>
                 <div class="project-showcase__actions">
                   <a class="btn btn--primary" href="projects/quickcal.html"
@@ -189,106 +328,206 @@
                 </div>
               </div>
               <div class="project-showcase__media">
-                <div
-                  class="media-placeholder media-placeholder--wide"
-                  role="img"
-                  aria-label="QuickCal media placeholder"
-                >
-                  <p class="media-placeholder__label">
-                    QuickCal image placeholder
-                  </p>
+                <div class="media-placeholder media-placeholder--wide qc-home-preview">
+                  <img
+                    class="qc-home-preview__img"
+                    src="assets/images/projects/quickcal/quickcal-phone-home.webp"
+                    width="600"
+                    height="1200"
+                    alt="QuickCal home screen preview"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
             </article>
 
             <article
-              class="project-showcase"
-              aria-labelledby="project-game-of-night"
+              class="project-showcase project-showcase--japan47"
+              aria-labelledby="project-japan47"
               data-reveal
             >
               <div class="project-showcase__meta">
                 <p class="project-showcase__number">03</p>
-                <h3 id="project-game-of-night" class="project-showcase__title">
-                  Game of Night
+                <h3 id="project-japan47" class="project-showcase__title">
+                  Japan<span class="project-showcase__accent">47</span>
                 </h3>
                 <p class="project-showcase__desc">
-                  Description pending. See docs/CONTENT_AND_LINKS.md.
+                  A community travel guide for discovering Japan through its
+                  regions, prefectures, and places.
                 </p>
-                <ul class="tag-list" aria-label="Technologies">
-                  <li class="tag">TODO: tags</li>
+                <ul class="tag-list" aria-label="Platforms">
+                  <li class="tag">Web</li>
+                  <li class="tag">iOS</li>
+                  <li class="tag">Android</li>
                 </ul>
                 <div class="project-showcase__actions">
-                  <a
-                    class="btn btn--primary"
-                    href="projects/game-of-night.html"
+                  <a class="btn btn--primary" href="projects/japan47.html"
                     >View Project</a
                   >
                 </div>
               </div>
               <div class="project-showcase__media">
-                <div
-                  class="media-placeholder media-placeholder--wide"
-                  role="img"
-                  aria-label="Game of Night media placeholder"
-                >
-                  <p class="media-placeholder__label">
-                    Game of Night image placeholder
-                  </p>
+                <div class="media-placeholder media-placeholder--wide">
+                  <img
+                    src="assets/images/projects/japan47/japan47-web-main.webp"
+                    width="1600"
+                    height="900"
+                    alt="Japan47 website homepage preview"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
             </article>
           </div>
         </section>
 
-        <!-- ABOUT — Phase 3 -->
+        <!-- ABOUT -->
         <section id="about" class="section about" aria-labelledby="about-heading">
           <div class="container">
-            <header class="section__header" data-reveal>
-              <p class="section__label">About</p>
-              <h2 id="about-heading" class="section__heading">About</h2>
-            </header>
-            <div class="about__body" data-reveal>
-              <p class="about__text">
-                About copy pending approval. Do not invent biography,
-                experience years, or employer claims.
-              </p>
-              <p class="todo-note">
-                Phase 3: write concise, recruiter-ready About content. Track
-                facts in <code>docs/CONTENT_AND_LINKS.md</code>.
-              </p>
+            <div class="about__layout" data-reveal>
+              <div class="about__copy">
+                <p class="section__label">About</p>
+                <h2 id="about-heading" class="about__heading">
+                  I like building things from the ground up.
+                </h2>
+                <div class="about__body">
+                  <p class="about__text">
+                    I’m a software developer focused on backend and full-stack
+                    development. What I enjoy most is taking an idea from
+                    nothing, defining how it should work, and turning it into a
+                    real product across backend, frontend, mobile,
+                    infrastructure, and deployment.
+                  </p>
+                  <p class="about__text">
+                    I prefer to understand the problem before rushing into code.
+                    I document the requirements, define the structure, think
+                    through the edge cases, and then build. I follow the same
+                    idea as the old saying: if I had six hours to cut down a
+                    tree, I’d spend four sharpening the axe.
+                  </p>
+                  <p class="about__text">
+                    I’m currently looking for a programming role where I can
+                    contribute, work with experienced engineers, and keep
+                    building real-world development experience.
+                  </p>
+                </div>
+              </div>
+
+              <aside class="about__glance" aria-labelledby="about-glance-heading">
+                <h3 id="about-glance-heading" class="about__glance-heading">
+                  At a glance
+                </h3>
+                <dl class="about__glance-list">
+                  <div class="about__glance-row">
+                    <dt>Focus</dt>
+                    <dd>Backend / Full Stack</dd>
+                  </div>
+                  <div class="about__glance-row">
+                    <dt>What I enjoy</dt>
+                    <dd>End-to-end product development</dd>
+                  </div>
+                  <div class="about__glance-row about__glance-row--accent">
+                    <dt>Approach</dt>
+                    <dd>Plan → Document → Build → Test → Improve</dd>
+                  </div>
+                  <div class="about__glance-row">
+                    <dt>Based in</dt>
+                    <dd>Japan</dd>
+                  </div>
+                  <div class="about__glance-row">
+                    <dt>Languages</dt>
+                    <dd>Japanese / English / Russian / Bulgarian</dd>
+                  </div>
+                  <div class="about__glance-row">
+                    <dt>Looking for</dt>
+                    <dd>Software development opportunities</dd>
+                  </div>
+                </dl>
+              </aside>
             </div>
           </div>
         </section>
 
-        <!-- SKILLS — Phase 3 -->
+        <!-- SKILLS -->
         <section
           id="skills"
           class="section skills"
           aria-labelledby="skills-heading"
         >
           <div class="container">
-            <header class="section__header" data-reveal>
+            <header class="section__header skills__header" data-reveal>
               <p class="section__label">Capabilities</p>
               <h2 id="skills-heading" class="section__heading">
                 Skills / Technologies
               </h2>
-              <p class="section__intro">
-                Structured skill groups will be added after content review —
-                only list technologies actually used.
+              <p class="section__intro skills__intro">
+                Technologies I’ve used across backend, frontend, mobile,
+                infrastructure, and integrations.
               </p>
             </header>
             <div class="skills__groups" data-reveal>
-              <div class="skills__group">
-                <h3>TODO: Group</h3>
-                <ul class="tag-list">
-                  <li class="tag">Pending</li>
+              <article class="skills__group">
+                <h3 class="skills__group-title">Backend</h3>
+                <ul class="skills__list">
+                  <li>Python</li>
+                  <li>Django</li>
+                  <li>Django REST Framework</li>
+                  <li>PostgreSQL</li>
+                  <li>Redis</li>
                 </ul>
-              </div>
+              </article>
+              <article class="skills__group">
+                <h3 class="skills__group-title">Frontend</h3>
+                <ul class="skills__list">
+                  <li>React</li>
+                  <li>JavaScript</li>
+                  <li>TypeScript</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Vite</li>
+                </ul>
+              </article>
+              <article class="skills__group">
+                <h3 class="skills__group-title">Mobile</h3>
+                <ul class="skills__list">
+                  <li>React Native</li>
+                  <li>Expo</li>
+                  <li>SQLite</li>
+                  <li>React Navigation</li>
+                </ul>
+              </article>
+              <article class="skills__group">
+                <h3 class="skills__group-title">Infrastructure</h3>
+                <ul class="skills__list">
+                  <li>Docker</li>
+                  <li>Nginx</li>
+                  <li>Reverse proxy configuration</li>
+                  <li>Gunicorn</li>
+                  <li>Cloudflare</li>
+                  <li>Certbot / TLS</li>
+                  <li>Hetzner</li>
+                  <li>GitHub Pages</li>
+                </ul>
+              </article>
+              <article class="skills__group">
+                <h3 class="skills__group-title">Services / Integrations</h3>
+                <ul class="skills__list">
+                  <li>Stripe</li>
+                  <li>OAuth</li>
+                  <li>Resend</li>
+                  <li>Umami Analytics</li>
+                  <li>Google AdSense</li>
+                  <li>Apple / Google in-app purchases</li>
+                  <li>EAS</li>
+                </ul>
+              </article>
             </div>
           </div>
         </section>
 
-        <!-- CONTACT — Phase 4 -->
+        <!-- CONTACT -->
         <section
           id="contact"
           class="section contact"
@@ -296,21 +535,137 @@
         >
           <div class="container">
             <div class="contact__panel" data-reveal>
-              <p class="section__label">Contact</p>
-              <h2 id="contact-heading" class="contact__heading">
-                Let’s connect
-              </h2>
-              <p class="contact__text">
-                Contact details pending. Email and social links will be added
-                only when listed as KNOWN in the content tracker.
-              </p>
-              <div class="btn-group">
-                <!-- TODO: mailto: when email is KNOWN -->
-                <a class="btn btn--primary" href="#contact">Get In Touch</a>
+              <div class="contact__layout">
+                <div class="contact__primary">
+                  <p class="section__label">Contact</p>
+                  <h2 id="contact-heading" class="contact__heading">
+                    Let’s connect
+                  </h2>
+                  <p class="contact__text">
+                    Open to roles and collaboration. Reach out by email or
+                    connect on GitHub and LinkedIn.
+                  </p>
+                  <ul class="contact__channels" aria-label="Contact details">
+                    <li class="contact__channel">
+                      <span class="contact__channel-label">Email</span>
+                      <span class="contact__channel-value"
+                        >work@alekspetk.com</span
+                      >
+                    </li>
+                    <li class="contact__channel">
+                      <span class="contact__channel-label">GitHub</span>
+                      <span class="contact__channel-value"
+                        >github.com/AleksPetk</span
+                      >
+                    </li>
+                    <li class="contact__channel">
+                      <span class="contact__channel-label">LinkedIn</span>
+                      <span class="contact__channel-value"
+                        >Aleksandar Petkov</span
+                      >
+                    </li>
+                  </ul>
+
+                  <div class="contact__cta" data-mail-menu>
+                    <div class="contact__cta-control">
+                      <button
+                        type="button"
+                        class="btn btn--primary"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-controls="mail-menu"
+                        data-mail-toggle
+                      >
+                        Get In Touch
+                      </button>
+                      <div
+                        class="mail-menu"
+                        id="mail-menu"
+                        role="menu"
+                        aria-label="Choose email app"
+                        hidden
+                        data-mail-panel
+                      >
+                        <a
+                          class="mail-menu__option"
+                          role="menuitem"
+                          href="mailto:work@alekspetk.com?subject=Portfolio%20contact%20%E2%80%94%20Aleksandar%20Petkov"
+                          >Default Mail App</a
+                        >
+                        <a
+                          class="mail-menu__option"
+                          role="menuitem"
+                          href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=work@alekspetk.com&amp;su=Portfolio%20contact%20%E2%80%94%20Aleksandar%20Petkov"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Gmail</a
+                        >
+                        <a
+                          class="mail-menu__option"
+                          role="menuitem"
+                          href="https://outlook.live.com/mail/0/deeplink/compose?to=work@alekspetk.com&amp;subject=Portfolio%20contact%20%E2%80%94%20Aleksandar%20Petkov"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Outlook</a
+                        >
+                      </div>
+                    </div>
+                    <p class="contact__hint">
+                      Choose your preferred email app — no contact form.
+                    </p>
+                  </div>
+                </div>
+
+                <aside class="contact__aside" aria-label="Other ways to connect">
+                  <p class="contact__aside-label">Prefer another way?</p>
+                  <ul class="contact__ways">
+                    <li>
+                      <a class="contact__way" href="mailto:work@alekspetk.com"
+                        ><span>Email</span
+                        ><span class="contact__way-arrow" aria-hidden="true"
+                          >→</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="contact__way"
+                        href="https://github.com/AleksPetk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><span>GitHub</span
+                        ><span class="contact__way-arrow" aria-hidden="true"
+                          >→</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="contact__way"
+                        href="https://www.linkedin.com/in/aleksandar-petkov-7a90b4435/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><span>LinkedIn</span
+                        ><span class="contact__way-arrow" aria-hidden="true"
+                          >→</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="contact__way"
+                        data-resume-open
+                      >
+                        <span>Resume</span
+                        ><span class="contact__way-arrow" aria-hidden="true"
+                          >→</span
+                        >
+                      </button>
+                    </li>
+                  </ul>
+                </aside>
               </div>
-              <p class="todo-note">
-                Phase 4 + Phase 10: wire real email, LinkedIn, GitHub, resume.
-              </p>
             </div>
           </div>
         </section>
@@ -325,7 +680,7 @@
             </p>
           </div>
           <nav class="site-footer__nav" aria-label="Footer">
-            <a href="#work">Work</a>
+            <a href="#work">Projects</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
@@ -335,6 +690,7 @@
     </div>
 
     <script src="js/navigation.js" defer></script>
+    <script src="js/contact.js" defer></script>
     <script src="js/animations.js" defer></script>
     <script src="js/hero-skills.js" defer></script>
     <script src="js/project.js" defer></script>

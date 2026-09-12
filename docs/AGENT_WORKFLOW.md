@@ -37,6 +37,7 @@ Prefer small, bounded tasks such as:
 - replace CheckStation image only
 - add one project link (already marked KNOWN)
 - improve mobile navigation only
+- apply one project’s visual skin to its homepage panel (without changing structure)
 
 Owners / orchestrators should preferably assign **one roadmap phase** or **one component** at a time.
 
@@ -45,6 +46,17 @@ If a prompt is vague (“make it better”, “finish the site”), the agent sh
 1. refuse to expand into a full redesign
 2. ask for / choose the single next roadmap phase
 3. implement only that slice
+
+## Homepage project sections (agent reminder)
+
+When editing Featured Projects:
+
+1. Keep the shared `.project-showcase` skeleton and `.work__panels` chrome (insets, gaps, radius)
+2. Do **not** redesign dimensions per project
+3. Do apply / preserve that project’s unique visual identity (background, accents, type personality)
+4. Keep homepage panel identity aligned with its detail **main** content
+5. Never restyle global header/footer for a project
+6. Read `HOMEPAGE_PLAN.md` and `DESIGN_DIRECTION.md` “Project-showcase direction” before changing structure
 
 ## Execution checklist
 

@@ -1,6 +1,15 @@
 /**
  * hero-skills.js — Lower-hero skill ribbon (L→R curved carousel).
  * Continuous seamless loop; no random spawn/drift. Respects reduced motion.
+ *
+ * Architecture:
+ *   .hero__skills        — fixed placement inside the hero (layout only)
+ *   .hero__skills-track  — measured local coordinate system + overflow mask
+ *   .hero-skill          — transforms relative to the track only
+ *
+ * Measures track client size (not scrollY / getBoundingClientRect) and
+ * remeasures on ResizeObserver / visibility / fonts so anchor loads match
+ * a normal top-of-page load.
  */
 (function () {
   "use strict";
@@ -34,6 +43,7 @@
   var lastTs = 0;
   var bandW = 0;
   var bandH = 0;
+  var resizeObserver = null;
 
   function prefersReducedMotion() {
     return (
@@ -79,7 +89,7 @@
   }
 
   /**
-   * Fixed roller-coaster track across the band (screen-space).
+   * Fixed roller-coaster track across the band (local band coordinates).
    * Words ride this path as they travel left → right.
    */
   function pathY(x, width, height) {
@@ -94,12 +104,18 @@
   }
 
   function measure() {
-    if (!band) return;
-    bandW = band.clientWidth || window.innerWidth;
-    bandH = band.clientHeight || 120;
+    if (!band) return false;
+    // clientWidth/Height are layout-local to the track — independent of scrollY
+    var nextW = band.clientWidth;
+    var nextH = band.clientHeight;
+    if (nextW < 1 || nextH < 1) return false;
+    bandW = nextW;
+    bandH = nextH;
+    return true;
   }
 
   function layoutStatic() {
+    if (!measure()) return;
     clearBand();
     var picks = [SKILLS[0], SKILLS[2], SKILLS[4]];
     var i;
@@ -128,7 +144,7 @@
   }
 
   function paint(dt) {
-    if (!nodes.length || !bandW) return;
+    if (!nodes.length || !bandW || !bandH) return;
 
     // ~35% slower than prior ribbon speed; continuous modulo loop
     var speed = 0.01;
@@ -191,7 +207,7 @@
 
   function start() {
     if (running) return;
-    measure();
+    if (!measure()) return;
     if (!nodes.length) buildTrack();
     running = true;
     lastTs = 0;
@@ -206,14 +222,26 @@
     lastTs = 0;
   }
 
-  function onResize() {
-    measure();
+  function syncLayout() {
+    if (!measure()) return;
     if (prefersReducedMotion()) {
       layoutStatic();
       return;
     }
     if (!nodes.length) buildTrack();
     paint(0);
+    if (!running && !document.hidden) start();
+  }
+
+  function onResize() {
+    syncLayout();
+  }
+
+  function scheduleMeasure() {
+    // Double rAF: wait for layout + scroll restoration / hash jump
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(syncLayout);
+    });
   }
 
   function init() {
@@ -223,18 +251,24 @@
     band = hero.querySelector("[data-hero-skills]");
     if (!band) return;
 
-    measure();
-
     if (prefersReducedMotion()) {
       hero.classList.add("hero--skills-static");
-      layoutStatic();
+      scheduleMeasure();
       window.addEventListener("resize", onResize);
       return;
     }
 
     buildTrack();
+    scheduleMeasure();
 
-    if (!document.hidden) start();
+    if (!document.hidden) {
+      // Start after first layout pass so bandW/bandH match the hero track
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
+          if (!document.hidden) start();
+        });
+      });
+    }
 
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) stop();
@@ -242,6 +276,40 @@
     });
 
     window.addEventListener("resize", onResize);
+
+    // bfcache / back-forward / hash restoration
+    window.addEventListener("pageshow", scheduleMeasure);
+    window.addEventListener("hashchange", scheduleMeasure);
+
+    if (typeof ResizeObserver !== "undefined") {
+      resizeObserver = new ResizeObserver(function () {
+        syncLayout();
+      });
+      resizeObserver.observe(band);
+    }
+
+    // Remeasure when the hero is actually on screen (anchor loads, AP return)
+    if (typeof IntersectionObserver !== "undefined") {
+      var io = new IntersectionObserver(
+        function (entries) {
+          var i;
+          for (i = 0; i < entries.length; i += 1) {
+            if (entries[i].isIntersecting) {
+              syncLayout();
+              break;
+            }
+          }
+        },
+        { root: null, threshold: 0.01 }
+      );
+      io.observe(hero);
+    }
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        scheduleMeasure();
+      });
+    }
   }
 
   window.APHeroSkills = { init: init };

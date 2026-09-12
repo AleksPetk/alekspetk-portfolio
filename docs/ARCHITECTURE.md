@@ -106,7 +106,9 @@ Each major project is a standalone HTML file in `projects/` sharing:
 - `project.css` section structure
 - relative paths back to `../css`, `../js`, `../assets`, `../index.html`
 
-Shared semantic blocks: hero, overview, features, tech, gallery, links, next project, footer.
+Shared semantic blocks: hero, overview, features, tech, gallery, links/CTA, then global footer.
+
+Do **not** include a “Next project” section by default.
 
 ## Relative-path strategy
 
@@ -133,9 +135,9 @@ From project pages, homepage anchors use `../index.html#work` (etc.).
 2. Create `projects/<slug>.html` using an existing project page as the template
 3. Add `assets/images/projects/<slug>/`
 4. Add a homepage showcase article in `#work` (large section, not a tiny card)
-5. Wire “Next project” links in a sensible order
-6. Update `ASSET_PLAN.md` and roadmap status as needed
-7. Do **not** invent URLs or screenshots
+5. Update `ASSET_PLAN.md` and roadmap status as needed
+6. Do **not** invent URLs or screenshots
+7. Do **not** add a “Next project” section unless explicitly requested
 
 ## What not to do
 

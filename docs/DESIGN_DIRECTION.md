@@ -61,16 +61,19 @@ Do not let supporting copy overpower the brand name in the hero.
 - Screenshots and product UI carry color/personality
 - Placeholders until real assets exist (no stock photography)
 - Crop for clarity of product UI; avoid busy device-mock spam unless intentionally designed
-- Per-project visual identity is allowed inside the shared dark frame
+- Per-project visual identity is required on homepage showcases and matching detail pages (see below)
 
 ## Header direction
 
 - Left: **AP** mark only (never full name in the main nav brand)
 - Right: Work · About · Skills · Contact · Resume
+- Resume opens a global CV menu (English CV + 履歴書 + 職務経歴書 · View / Download) — identical on every page
 - Sticky
 - Almost transparent at top; subtle dark surface + border after scroll
 - Clean mobile navigation
 - No unnecessary social icons in the main nav
+- **Same header on every page** (homepage + all project pages) — never replace with a project-themed header
+- Do **not** build project-specific Resume menus
 
 ## Hero direction
 
@@ -94,9 +97,68 @@ Brand-first: the name is a hero-level signal. The first viewport should not look
 
 ## Project-showcase direction (homepage)
 
-- Large, horizontal, cinematic sections
-- Alternating layout where useful
-- Include: number, name, short description, tech tags, large media, View Project, live/store links when known
+**Same skeleton, different skin.**
+
+The surrounding site stays dark cinematic. Each featured project is a large **panel** inside `.work__panels` that may fully adopt that product’s visual identity.
+
+### Visual identity (per project — allowed)
+
+Each showcase **must** inherit the identity of the project it represents. Allowed to change:
+
+- background color (including full light themes when the product is light, e.g. Japan47 cream)
+- accent colors
+- title typography personality (e.g. serif for Japan47)
+- button colors
+- tag colors
+- border styling
+- subtle project-specific atmosphere
+
+Example — Japan47:
+
+- warm beige / cream background
+- Japan red accents
+- dark green / charcoal text
+- serif display typography
+- light editorial language
+
+The user should feel the project’s identity **before** clicking View Project. The homepage panel is a visual preview of the detail page.
+
+### Structure (shared — non-negotiable)
+
+Do **not** change per project:
+
+- section height / width behavior
+- overall grid
+- content positioning system
+- screenshot/media area size or placement
+- internal spacing system
+- button dimensions
+- tag dimensions
+- responsive structure
+
+New projects reuse `.project-showcase` (+ optional modifier class). Never invent a one-off layout.
+
+### Outer panel chrome (shared)
+
+Project panels must **not** touch each other or the browser edges.
+
+| Viewport | Side inset | Vertical gap | Corner radius |
+| --- | --- | --- | --- |
+| Desktop | ~16–20px | ~10–16px | ~20–24px |
+| Tablet | ~12–16px | ~10–14px | ~16–20px |
+| Mobile | ~8–12px | ~8–12px | ~16–20px |
+
+- Gaps stay subtle — panels remain large and immersive, not tiny floating cards
+- Softly rounded outer corners; clip backgrounds/gradients/media with `overflow: hidden`
+- Avoid sharp full-bleed slabs and excessive pill rounding
+
+Implementation: `.work__panels` + `.project-showcase` in `css/components.css` / `css/responsive.css`.
+
+### Include
+
+- Number, name, short description, tags, large media, View Project
+- Live/store links when KNOWN
+- Alternating text/media where useful
 - **Not** three tiny equal cards
 
 ## Footer direction
@@ -105,6 +167,7 @@ Brand-first: the name is a hero-level signal. The first viewport should not look
 - AP + short identity line
 - Minimal nav links
 - No noisy icon walls unless later approved
+- **Same footer on every page** — dark alekspetk.com branding; project themes end before the footer
 
 ## Animation philosophy
 
@@ -132,6 +195,8 @@ Brand-first: the name is a hero-level signal. The first viewport should not look
 - Drop random stock imagery
 - Add fake stats, fake testimonials, or fake employment claims
 - Force identical blue/purple overlays on every project image
+- Redesign showcase dimensions or invent a new layout per project
+- Drop outer panel insets / rounded corners on homepage showcases
 - Visually redesign the site direction without **explicit** instruction
 - Put social icon clusters in the primary header nav
 - Fill unfinished sections with generic AI marketing copy

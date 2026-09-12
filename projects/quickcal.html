@@ -7,26 +7,57 @@
     <title>QuickCal — Aleksandar Petkov</title>
     <meta
       name="description"
-      content="TODO: Final QuickCal project description for SEO."
+      content="QuickCal — a focused offline-first calorie counter for iOS and Android. Solo-built by Aleksandar Petkov."
     />
-    <link rel="canonical" href="https://alekspetk.com/projects/quickcal.html" />
+    <link
+      rel="canonical"
+      href="https://alekspetk.com/projects/quickcal.html"
+    />
 
     <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://alekspetk.com/projects/quickcal.html"
+    />
     <meta property="og:title" content="QuickCal — Aleksandar Petkov" />
-    <meta property="og:description" content="TODO: Final Open Graph description." />
-    <meta property="og:image" content="TODO: project OG image" />
+    <meta
+      property="og:description"
+      content="Focused iOS and Android calorie counter built for speed — personal food library, one-tap logging, offline-first."
+    />
+    <meta
+      property="og:image"
+      content="https://alekspetk.com/assets/images/projects/quickcal/quickcal-phone-home.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="QuickCal — Aleksandar Petkov" />
+    <meta
+      name="twitter:description"
+      content="Focused offline-first calorie counter for iOS and Android."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alekspetk.com/assets/images/projects/quickcal/quickcal-phone-home.webp"
+    />
 
     <meta name="theme-color" content="#0b0f17" />
     <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/components.css" />
     <link rel="stylesheet" href="../css/project.css" />
+    <link rel="stylesheet" href="../css/quickcal.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
   </head>
-  <body>
+  <body class="project-quickcal">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <div class="page">
@@ -47,18 +78,120 @@
 
           <nav class="nav" id="site-nav" data-nav aria-label="Primary">
             <ul class="nav__list">
-              <li><a class="nav__link" href="../index.html#work">Work</a></li>
+              <li><a class="nav__link" href="../index.html#work">Projects</a></li>
               <li><a class="nav__link" href="../index.html#about">About</a></li>
               <li><a class="nav__link" href="../index.html#skills">Skills</a></li>
               <li>
                 <a class="nav__link" href="../index.html#contact">Contact</a>
               </li>
-              <li>
-                <a
+              <li class="nav-resume" data-resume-menu>
+                <button
+                  type="button"
                   class="nav__link nav__link--resume"
-                  href="../assets/documents/resume/"
-                  >Resume</a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-controls="resume-menu"
+                  data-resume-toggle
                 >
+                  Resume
+                </button>
+                <div
+                  class="resume-menu"
+                  id="resume-menu"
+                  role="menu"
+                  aria-label="Resume options"
+                  hidden
+                  data-resume-panel
+                >
+                  <div class="resume-menu__section">
+                    <p class="resume-menu__section-label" id="resume-en-section">
+                      English
+                    </p>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-en-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-en-doc">
+                        English CV
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-cv-en.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-cv-en.pdf"
+                          download="Aleksandar-Petkov-CV-English.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resume-menu__section">
+                    <p class="resume-menu__section-label" id="resume-ja-section">
+                      Japanese
+                    </p>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-rirekisho-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-rirekisho-doc">
+                        履歴書
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-rirekisho-ja.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-rirekisho-ja.pdf"
+                          download="Aleksandar-Petkov-Rirekisho.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-shokumu-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-shokumu-doc">
+                        職務経歴書
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-shokumukeirekisho-ja.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-shokumukeirekisho-ja.pdf"
+                          download="Aleksandar-Petkov-Shokumukeirekisho.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </nav>
@@ -70,135 +203,351 @@
       </header>
 
       <main id="main" class="page__main">
-        <section class="project-hero" aria-labelledby="project-title">
-          <div class="container project-hero__grid">
-            <div class="project-hero__content">
-              <p class="project-hero__category">
-                <!-- TODO: category e.g. Mobile app -->
-                Project type pending
+        <!-- Hero -->
+        <section class="qc-hero" aria-labelledby="project-title">
+          <div class="container qc-hero__grid">
+            <div class="qc-hero__content">
+              <p class="qc-label">Mobile app / Calorie tracking</p>
+              <h1 id="project-title" class="qc-hero__title">QuickCal</h1>
+              <p class="qc-hero__desc">
+                QuickCal is a focused iOS and Android calorie counter built for
+                speed. Users keep a personal food library on the device and log
+                known meals in one tap or through a short portion step.
               </p>
-              <h1 id="project-title" class="project-hero__title">QuickCal</h1>
-              <p class="project-hero__desc">
-                Short description pending. Do not invent product claims. See
-                docs/CONTENT_AND_LINKS.md.
-              </p>
-              <p class="project-hero__status">Status: TODO</p>
-              <ul class="tag-list" aria-label="Technologies">
-                <li class="tag">TODO: tags</li>
+              <ul class="qc-meta" aria-label="Platforms and product traits">
+                <li class="qc-meta__item">iOS</li>
+                <li class="qc-meta__item">Android</li>
+                <li class="qc-meta__item">Offline-first</li>
+                <li class="qc-meta__item">Lifetime purchase</li>
               </ul>
-              <div class="project-hero__actions">
-                <a class="btn btn--secondary" href="../index.html#work"
-                  >Back to work</a
+              <div class="qc-hero__actions">
+                <a
+                  class="btn btn--primary"
+                  href="https://apps.apple.com/jp/app/quickcal-calorie-counter/id6797413596?l=en-US"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >App Store</a
+                >
+                <a
+                  class="btn btn--secondary"
+                  href="https://play.google.com/store/apps/details?id=com.alekspetk.quickcal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Google Play</a
                 >
               </div>
             </div>
-            <div>
-              <div
-                class="media-placeholder media-placeholder--wide"
-                role="img"
-                aria-label="QuickCal hero visual placeholder"
-              >
-                <p class="media-placeholder__label">
-                  QuickCal hero media<br />
-                  assets/images/projects/quickcal/
+
+            <div class="qc-phone">
+              <div class="qc-frame">
+                <div class="qc-frame__stage">
+                  <img
+                    class="qc-frame__media"
+                    src="../assets/images/projects/quickcal/quickcal-phone-home.webp"
+                    width="600"
+                    height="1200"
+                    alt="QuickCal home screen with quick log and today’s log"
+                    decoding="async"
+                    fetchpriority="high"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="qc-section" aria-labelledby="overview-heading">
+          <div class="container">
+            <p class="qc-label">Overview</p>
+            <h2 id="overview-heading" class="qc-heading">What QuickCal is about</h2>
+            <div class="qc-overview">
+              <div class="qc-overview__item">
+                <h3>What it is</h3>
+                <p>
+                  QuickCal is a small iOS and Android calorie counter designed
+                  around fast repeat logging. There is no account and no shared
+                  online food database; foods, logs, settings, planner data, and
+                  images stay on the device.
+                </p>
+              </div>
+              <div class="qc-overview__item">
+                <h3>Why it exists</h3>
+                <p>
+                  Many calorie apps make repeat logging slow by forcing users
+                  through large shared food catalogs. QuickCal treats setup as a
+                  one-time cost: save the foods you actually eat, pin frequent
+                  items, then log them quickly from Home.
+                </p>
+              </div>
+              <div class="qc-overview__item">
+                <h3>My role</h3>
+                <p>
+                  I designed and built QuickCal as a solo project, including the
+                  native mobile UI, offline-first architecture, SQLite data
+                  layer, logging workflows, trial and lifetime purchase flow,
+                  backup tools, and iOS/Android release configuration.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="project-section" aria-labelledby="overview-heading">
-          <div class="container">
-            <h2 id="overview-heading" class="project-section__heading">
-              Overview
-            </h2>
-            <div class="project-overview">
-              <div class="project-overview__item">
-                <h3>Problem</h3>
-                <p>TODO — approved copy only.</p>
+        <!-- Spotlight + second screenshot -->
+        <section class="qc-section" aria-labelledby="spotlight-heading">
+          <div class="container qc-spotlight">
+            <div class="qc-phone">
+              <div class="qc-frame">
+                <div class="qc-frame__stage">
+                  <img
+                    class="qc-frame__media"
+                    src="../assets/images/projects/quickcal/quickcal-phone-lifetime.webp"
+                    width="600"
+                    height="1200"
+                    alt="QuickCal lifetime unlock purchase screen"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
               </div>
-              <div class="project-overview__item">
-                <h3>Solution</h3>
-                <p>TODO — approved copy only.</p>
-              </div>
-              <div class="project-overview__item">
-                <h3>My role</h3>
-                <p>TODO — approved copy only.</p>
-              </div>
+            </div>
+            <div class="qc-spotlight__copy">
+              <p class="qc-label">Product focus</p>
+              <h2 id="spotlight-heading" class="qc-heading">
+                Fast logging, fully on-device
+              </h2>
+              <p class="qc-lead">
+                QuickCal keeps the experience small on purpose: a personal food
+                library, one-tap Quick Log, portion multipliers when needed, and
+                local SQLite storage — with a 14-day trial and a one-time
+                lifetime unlock.
+              </p>
             </div>
           </div>
         </section>
 
-        <section class="project-section" aria-labelledby="features-heading">
+        <!-- Features -->
+        <section class="qc-section" aria-labelledby="features-heading">
           <div class="container">
-            <h2 id="features-heading" class="project-section__heading">
-              Features
-            </h2>
-            <div class="feature-list">
-              <div class="feature-list__item">
-                <h3>Feature title pending</h3>
-                <p>Feature copy pending.</p>
-              </div>
+            <p class="qc-label">Core experience</p>
+            <h2 id="features-heading" class="qc-heading">What you can do</h2>
+            <div class="qc-features">
+              <article class="qc-feature">
+                <p class="qc-feature__num" aria-hidden="true">01</p>
+                <div>
+                  <h3>Quick Log</h3>
+                  <p>Log a saved food or meal in one tap.</p>
+                </div>
+              </article>
+              <article class="qc-feature">
+                <p class="qc-feature__num" aria-hidden="true">02</p>
+                <div>
+                  <h3>Portion Logging</h3>
+                  <p>
+                    Use 1x, 1.5x, 2x, or a custom multiplier for portion-based
+                    items.
+                  </p>
+                </div>
+              </article>
+              <article class="qc-feature">
+                <p class="qc-feature__num" aria-hidden="true">03</p>
+                <div>
+                  <h3>Personal Library</h3>
+                  <p>
+                    Maintain your own on-device food library with optional photos
+                    and pinned items.
+                  </p>
+                </div>
+              </article>
+              <article class="qc-feature">
+                <p class="qc-feature__num" aria-hidden="true">04</p>
+                <div>
+                  <h3>Offline Reference Foods</h3>
+                  <p>
+                    Copy common USDA reference ingredients into your personal
+                    library without relying on an online food database.
+                  </p>
+                </div>
+              </article>
+              <article class="qc-feature">
+                <p class="qc-feature__num" aria-hidden="true">05</p>
+                <div>
+                  <h3>Today &amp; History</h3>
+                  <p>
+                    Review, edit, delete, and undo logged entries while browsing
+                    previous days.
+                  </p>
+                </div>
+              </article>
+              <article class="qc-feature">
+                <p class="qc-feature__num" aria-hidden="true">06</p>
+                <div>
+                  <h3>Goals &amp; Planner</h3>
+                  <p>
+                    Set calorie and optional macro goals, with a local calorie
+                    planner that can calculate recommended targets.
+                  </p>
+                </div>
+              </article>
+              <article class="qc-feature">
+                <p class="qc-feature__num" aria-hidden="true">07</p>
+                <div>
+                  <h3>Local-First Data</h3>
+                  <p>
+                    SQLite storage, retention controls, ZIP backup/import, and no
+                    account or cloud sync required.
+                  </p>
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
-        <section class="project-section" aria-labelledby="tech-heading">
+        <!-- What I built -->
+        <section class="qc-section" aria-labelledby="built-heading">
           <div class="container">
-            <h2 id="tech-heading" class="project-section__heading">
-              Tech stack
-            </h2>
-            <div class="tech-groups">
-              <div class="tech-groups__item">
-                <h3>TODO: Group</h3>
-                <ul class="tag-list">
-                  <li class="tag">Pending</li>
+            <p class="qc-label">Contribution</p>
+            <h2 id="built-heading" class="qc-heading">What I built</h2>
+            <div class="qc-built__grid">
+              <article class="qc-built__item">
+                <h3>Product architecture</h3>
+                <p>
+                  Built QuickCal as an offline-first native mobile app with no
+                  application backend. SQLite is the source of truth for foods,
+                  logs, goals, settings, planner data, and entitlement state.
+                </p>
+              </article>
+              <article class="qc-built__item">
+                <h3>Mobile UI</h3>
+                <p>
+                  Built a four-tab native interface for Home, Library, History,
+                  and Settings, including quick-entry controls, pinned foods,
+                  Today’s Log, themes, and mobile-safe navigation.
+                </p>
+              </article>
+              <article class="qc-built__item">
+                <h3>Logging &amp; personal library</h3>
+                <p>
+                  Implemented typed calorie logging, one-tap Quick Log,
+                  portion-based logging, user-owned library items, pinned foods,
+                  optional local images, and an offline reference-food copy
+                  workflow.
+                </p>
+              </article>
+              <article class="qc-built__item">
+                <h3>Local data</h3>
+                <p>
+                  Implemented versioned SQLite migrations, snapshot-based log
+                  history, configurable retention, clear-history and erase-all
+                  flows, and local ZIP export/import.
+                </p>
+              </article>
+              <article class="qc-built__item">
+                <h3>Planner &amp; settings</h3>
+                <p>
+                  Implemented calorie and optional macro goals, day reset time,
+                  retention settings, themes, onboarding replay, and a local
+                  calorie planner.
+                </p>
+              </article>
+              <article class="qc-built__item">
+                <h3>Purchases &amp; release</h3>
+                <p>
+                  Implemented a 14-day trial, one-time lifetime unlock, purchase
+                  restore, local entitlement caching, and EAS configuration for
+                  iOS and Android store builds.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technology -->
+        <section class="qc-section" aria-labelledby="tech-heading">
+          <div class="container">
+            <p class="qc-label">Technology</p>
+            <h2 id="tech-heading" class="qc-heading">Stack</h2>
+            <div class="qc-tech">
+              <div class="qc-tech__item">
+                <h3>Mobile</h3>
+                <ul>
+                  <li>Expo 54</li>
+                  <li>React Native 0.81.5</li>
+                  <li>React 19.1</li>
+                  <li>expo-dev-client</li>
+                </ul>
+              </div>
+              <div class="qc-tech__item">
+                <h3>Language</h3>
+                <ul>
+                  <li>TypeScript</li>
+                </ul>
+              </div>
+              <div class="qc-tech__item">
+                <h3>Database / Storage</h3>
+                <ul>
+                  <li>SQLite / expo-sqlite</li>
+                  <li>expo-file-system</li>
+                  <li>Bundled JSON reference foods</li>
+                  <li>fflate for ZIP backup</li>
+                </ul>
+              </div>
+              <div class="qc-tech__item">
+                <h3>Navigation / UI</h3>
+                <ul>
+                  <li>React Navigation 7</li>
+                  <li>react-native-screens</li>
+                  <li>react-native-safe-area-context</li>
+                  <li>expo-linear-gradient</li>
+                  <li>expo-font</li>
+                  <li>expo-image-picker</li>
+                  <li>expo-image-manipulator</li>
+                </ul>
+              </div>
+              <div class="qc-tech__item">
+                <h3>Purchases</h3>
+                <ul>
+                  <li>expo-iap</li>
+                  <li>App-managed local trial/entitlement state</li>
+                </ul>
+              </div>
+              <div class="qc-tech__item">
+                <h3>Tooling</h3>
+                <ul>
+                  <li>TypeScript checks with tsc</li>
+                  <li>EAS Build</li>
+                  <li>Node smoke scripts</li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="project-section" aria-labelledby="gallery-heading">
+        <!-- CTA -->
+        <section class="qc-section qc-cta" aria-labelledby="cta-heading">
           <div class="container">
-            <h2 id="gallery-heading" class="project-section__heading">
-              Gallery
-            </h2>
-            <div class="gallery-grid">
-              <div
-                class="media-placeholder"
-                role="img"
-                aria-label="Screenshot placeholder"
+            <p class="qc-label">Get the app</p>
+            <h2 id="cta-heading" class="qc-heading">Get QuickCal</h2>
+            <p class="qc-lead">
+              Download QuickCal on iOS or Android — offline-first calorie
+              tracking with a personal food library.
+            </p>
+            <div class="qc-cta__actions">
+              <a
+                class="qc-store"
+                href="https://apps.apple.com/jp/app/quickcal-calorie-counter/id6797413596?l=en-US"
+                target="_blank"
+                rel="noopener noreferrer"
+                >App Store</a
               >
-                <p class="media-placeholder__label">Screenshot placeholder</p>
-              </div>
+              <a
+                class="qc-store qc-store--outline"
+                href="https://play.google.com/store/apps/details?id=com.alekspetk.quickcal"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Google Play</a
+              >
             </div>
-          </div>
-        </section>
-
-        <section class="project-section" aria-labelledby="links-heading">
-          <div class="container">
-            <h2 id="links-heading" class="project-section__heading">Links</h2>
-            <div class="project-links">
-              <p class="todo-note">
-                Add App Store, Google Play, website, or GitHub only when marked
-                KNOWN in <code>docs/CONTENT_AND_LINKS.md</code>. Never invent
-                URLs.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-section" aria-labelledby="next-heading">
-          <div class="container">
-            <h2 id="next-heading" class="sr-only">Next project</h2>
-            <a class="next-project" href="game-of-night.html">
-              <div>
-                <p class="next-project__label">Next project</p>
-                <p class="next-project__title">Game of Night</p>
-              </div>
-              <span class="btn btn--secondary" aria-hidden="true">View</span>
-            </a>
           </div>
         </section>
       </main>
@@ -212,8 +561,9 @@
             </p>
           </div>
           <nav class="site-footer__nav" aria-label="Footer">
-            <a href="../index.html#work">Work</a>
+            <a href="../index.html#work">Projects</a>
             <a href="../index.html#about">About</a>
+            <a href="../index.html#skills">Skills</a>
             <a href="../index.html#contact">Contact</a>
           </nav>
         </div>
@@ -221,7 +571,6 @@
     </div>
 
     <script src="../js/navigation.js" defer></script>
-    <script src="../js/animations.js" defer></script>
     <script src="../js/project.js" defer></script>
     <script src="../js/main.js" defer></script>
   </body>

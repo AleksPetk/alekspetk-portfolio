@@ -7,26 +7,57 @@
     <title>CheckStation — Aleksandar Petkov</title>
     <meta
       name="description"
-      content="TODO: Final CheckStation project description for SEO."
+      content="CheckStation — a multi-tenant SaaS platform for configurable check-in and attendance. Solo-built by Aleksandar Petkov."
     />
-    <link rel="canonical" href="https://alekspetk.com/projects/checkstation.html" />
+    <link
+      rel="canonical"
+      href="https://alekspetk.com/projects/checkstation.html"
+    />
 
     <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://alekspetk.com/projects/checkstation.html"
+    />
     <meta property="og:title" content="CheckStation — Aleksandar Petkov" />
-    <meta property="og:description" content="TODO: Final Open Graph description." />
-    <meta property="og:image" content="TODO: project OG image" />
+    <meta
+      property="og:description"
+      content="Multi-tenant SaaS for configurable check-in, attendance, and self-service kiosks — live on checkstation.app."
+    />
+    <meta
+      property="og:image"
+      content="https://alekspetk.com/assets/images/projects/checkstation/checkstation-public.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CheckStation — Aleksandar Petkov" />
+    <meta
+      name="twitter:description"
+      content="Multi-tenant SaaS for configurable check-in, attendance, and self-service kiosks."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alekspetk.com/assets/images/projects/checkstation/checkstation-public.webp"
+    />
 
     <meta name="theme-color" content="#0b0f17" />
     <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/components.css" />
     <link rel="stylesheet" href="../css/project.css" />
+    <link rel="stylesheet" href="../css/checkstation.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
   </head>
-  <body>
+  <body class="project-checkstation">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <div class="page">
@@ -47,18 +78,120 @@
 
           <nav class="nav" id="site-nav" data-nav aria-label="Primary">
             <ul class="nav__list">
-              <li><a class="nav__link" href="../index.html#work">Work</a></li>
+              <li><a class="nav__link" href="../index.html#work">Projects</a></li>
               <li><a class="nav__link" href="../index.html#about">About</a></li>
               <li><a class="nav__link" href="../index.html#skills">Skills</a></li>
               <li>
                 <a class="nav__link" href="../index.html#contact">Contact</a>
               </li>
-              <li>
-                <a
+              <li class="nav-resume" data-resume-menu>
+                <button
+                  type="button"
                   class="nav__link nav__link--resume"
-                  href="../assets/documents/resume/"
-                  >Resume</a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-controls="resume-menu"
+                  data-resume-toggle
                 >
+                  Resume
+                </button>
+                <div
+                  class="resume-menu"
+                  id="resume-menu"
+                  role="menu"
+                  aria-label="Resume options"
+                  hidden
+                  data-resume-panel
+                >
+                  <div class="resume-menu__section">
+                    <p class="resume-menu__section-label" id="resume-en-section">
+                      English
+                    </p>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-en-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-en-doc">
+                        English CV
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-cv-en.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-cv-en.pdf"
+                          download="Aleksandar-Petkov-CV-English.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resume-menu__section">
+                    <p class="resume-menu__section-label" id="resume-ja-section">
+                      Japanese
+                    </p>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-rirekisho-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-rirekisho-doc">
+                        履歴書
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-rirekisho-ja.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-rirekisho-ja.pdf"
+                          download="Aleksandar-Petkov-Rirekisho.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="resume-menu__group"
+                      role="group"
+                      aria-labelledby="resume-shokumu-doc"
+                    >
+                      <p class="resume-menu__doc" id="resume-shokumu-doc">
+                        職務経歴書
+                      </p>
+                      <div class="resume-menu__actions">
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-shokumukeirekisho-ja.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View</a
+                        >
+                        <a
+                          class="resume-menu__action"
+                          role="menuitem"
+                          href="../assets/documents/resume/aleksandar-petkov-shokumukeirekisho-ja.pdf"
+                          download="Aleksandar-Petkov-Shokumukeirekisho.pdf"
+                          >Download</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </nav>
@@ -70,137 +203,626 @@
       </header>
 
       <main id="main" class="page__main">
-        <section class="project-hero" aria-labelledby="project-title">
-          <div class="container project-hero__grid">
-            <div class="project-hero__content">
-              <p class="project-hero__category">
-                <!-- TODO: category e.g. Web product / Platform -->
-                Project type pending
+        <!-- Hero -->
+        <section class="cs-hero" aria-labelledby="project-title">
+          <div class="container cs-hero__grid">
+            <div class="cs-hero__content">
+              <p class="cs-label">Live SaaS platform / Attendance &amp; check-in</p>
+              <h1 id="project-title" class="cs-hero__title">CheckStation</h1>
+              <p class="cs-hero__desc">
+                CheckStation is a multi-tenant SaaS platform for configurable
+                check-in and attendance. Organizations run their own workspaces
+                with Members, Groups, and self-service kiosks, while every action
+                is preserved as historical attendance records.
               </p>
-              <h1 id="project-title" class="project-hero__title">
-                CheckStation
-              </h1>
-              <p class="project-hero__desc">
-                Short description pending. Do not invent product claims. See
-                docs/CONTENT_AND_LINKS.md.
+              <p class="cs-hero__note">
+                Built for schools, workplaces, clubs, training organizations, and
+                similar teams that need flexible participation tracking.
               </p>
-              <p class="project-hero__status">Status: TODO</p>
-              <ul class="tag-list" aria-label="Technologies">
-                <li class="tag">TODO: tags</li>
+              <ul class="cs-meta" aria-label="Product traits">
+                <li class="cs-meta__item">Multi-tenant</li>
+                <li class="cs-meta__item">Live billing</li>
+                <li class="cs-meta__item">Self-service kiosks</li>
               </ul>
-              <div class="project-hero__actions">
-                <!-- Primary live link only when KNOWN -->
-                <a class="btn btn--secondary" href="../index.html#work"
-                  >Back to work</a
+              <div class="cs-hero__actions">
+                <a
+                  class="btn btn--primary"
+                  href="https://checkstation.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Visit CheckStation</a
+                >
+                <a
+                  class="btn btn--secondary"
+                  href="https://workspace.checkstation.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open Workspace</a
+                >
+                <a
+                  class="btn btn--ghost"
+                  href="https://docs.checkstation.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Docs</a
+                >
+                <a
+                  class="btn btn--ghost"
+                  href="https://status.checkstation.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Status</a
                 >
               </div>
             </div>
-            <div>
-              <div
-                class="media-placeholder media-placeholder--wide"
-                role="img"
-                aria-label="CheckStation hero visual placeholder"
-              >
-                <p class="media-placeholder__label">
-                  CheckStation hero media<br />
-                  assets/images/projects/checkstation/
+
+            <div class="cs-browser">
+              <div class="cs-frame">
+                <div class="cs-frame__chrome" aria-hidden="true">
+                  <span class="cs-frame__dot"></span>
+                  <span class="cs-frame__dot"></span>
+                  <span class="cs-frame__dot"></span>
+                  <span class="cs-frame__url">checkstation.app</span>
+                </div>
+                <div class="cs-frame__stage">
+                  <img
+                    class="cs-frame__media"
+                    src="../assets/images/projects/checkstation/checkstation-public.webp"
+                    width="1600"
+                    height="900"
+                    alt="CheckStation public website homepage"
+                    decoding="async"
+                    fetchpriority="high"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="cs-section" aria-labelledby="overview-heading">
+          <div class="container">
+            <p class="cs-label">Overview</p>
+            <h2 id="overview-heading" class="cs-heading">What CheckStation is about</h2>
+            <div class="cs-overview">
+              <div class="cs-overview__item">
+                <h3>What it is</h3>
+                <p>
+                  CheckStation is a multi-tenant SaaS platform for configurable
+                  check-in and attendance. Organizations manage Members, Groups,
+                  staff access, and participant-facing kiosks inside their own
+                  isolated workspace.
+                </p>
+              </div>
+              <div class="cs-overview__item">
+                <h3>Why it exists</h3>
+                <p>
+                  Most attendance products are rigid and tied to a specific
+                  workflow or industry. CheckStation is designed so organizations
+                  can configure their own Groups, kiosk actions, and participant
+                  flows while retaining durable history, permissions, billing, and
+                  operational controls.
+                </p>
+              </div>
+              <div class="cs-overview__item">
+                <h3>My role</h3>
+                <p>
+                  I am the sole builder of CheckStation. I designed the product
+                  architecture and multi-tenant domain model, built the Django/DRF
+                  backend, React web platform, kiosk system, authentication,
+                  Stripe billing, localization, email infrastructure, and
+                  production deployment.
+                </p>
+                <p>
+                  The live web platform is deployed across checkstation.app and
+                  workspace.checkstation.app. I am currently extending the same
+                  backend APIs into mobile and desktop applications.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="project-section" aria-labelledby="overview-heading">
+        <!-- Features -->
+        <section class="cs-section" aria-labelledby="features-heading">
           <div class="container">
-            <h2 id="overview-heading" class="project-section__heading">
-              Overview
-            </h2>
-            <div class="project-overview">
-              <div class="project-overview__item">
-                <h3>Problem</h3>
-                <p>TODO — approved copy only.</p>
-              </div>
-              <div class="project-overview__item">
-                <h3>Solution</h3>
-                <p>TODO — approved copy only.</p>
-              </div>
-              <div class="project-overview__item">
-                <h3>My role</h3>
-                <p>TODO — approved copy only.</p>
-              </div>
+            <p class="cs-label">Core features</p>
+            <h2 id="features-heading" class="cs-heading">What the platform covers</h2>
+            <div class="cs-features">
+              <article class="cs-feature">
+                <p class="cs-feature__num" aria-hidden="true">01</p>
+                <div>
+                  <h3>Multi-tenant workspaces</h3>
+                  <p>
+                    Each organization operates inside its own isolated workspace.
+                  </p>
+                </div>
+              </article>
+              <article class="cs-feature">
+                <p class="cs-feature__num" aria-hidden="true">02</p>
+                <div>
+                  <h3>Owner &amp; staff accounts</h3>
+                  <p>
+                    Owners manage the workspace while staff can access operational
+                    tools through separate credentials.
+                  </p>
+                </div>
+              </article>
+              <article class="cs-feature">
+                <p class="cs-feature__num" aria-hidden="true">03</p>
+                <div>
+                  <h3>Members</h3>
+                  <p>
+                    Reusable people records can participate across Groups without
+                    needing dashboard accounts.
+                  </p>
+                </div>
+              </article>
+              <article class="cs-feature">
+                <p class="cs-feature__num" aria-hidden="true">04</p>
+                <div>
+                  <h3>Groups</h3>
+                  <p>
+                    Groups define long-lived participation contexts and their
+                    associated kiosk behavior.
+                  </p>
+                </div>
+              </article>
+              <article class="cs-feature">
+                <p class="cs-feature__num" aria-hidden="true">05</p>
+                <div>
+                  <h3>Self-service kiosks</h3>
+                  <p>
+                    Each Group can launch a participant-facing kiosk for check-in
+                    and related actions.
+                  </p>
+                </div>
+              </article>
+              <article class="cs-feature">
+                <p class="cs-feature__num" aria-hidden="true">06</p>
+                <div>
+                  <h3>Kiosk editor</h3>
+                  <p>
+                    A visual editor lets workspace owners customize the kiosk
+                    appearance and flow.
+                  </p>
+                </div>
+              </article>
+              <article class="cs-feature">
+                <p class="cs-feature__num" aria-hidden="true">07</p>
+                <div>
+                  <h3>Attendance history</h3>
+                  <p>
+                    Every kiosk action creates lasting historical records for
+                    activity, attendance, and reporting.
+                  </p>
+                </div>
+              </article>
+              <article class="cs-feature">
+                <p class="cs-feature__num" aria-hidden="true">08</p>
+                <div>
+                  <h3>Plans &amp; billing</h3>
+                  <p>
+                    Basic, Plus, and Business plans with entitlements, trial
+                    behavior, and Stripe subscription management.
+                  </p>
+                </div>
+              </article>
+              <article class="cs-feature">
+                <p class="cs-feature__num" aria-hidden="true">09</p>
+                <div>
+                  <h3>Authentication &amp; security</h3>
+                  <p>
+                    Email/password auth, Google and Apple sign-in, optional owner
+                    2FA, rate limiting, CSRF protections, and tenant isolation.
+                  </p>
+                </div>
+              </article>
+              <article class="cs-feature">
+                <p class="cs-feature__num" aria-hidden="true">10</p>
+                <div>
+                  <h3>Localization &amp; email</h3>
+                  <p>
+                    English/Japanese UI plus platform and per-Group email delivery.
+                  </p>
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
-        <section class="project-section" aria-labelledby="features-heading">
+        <!-- Screenshots -->
+        <section class="cs-section" aria-labelledby="shots-heading">
           <div class="container">
-            <h2 id="features-heading" class="project-section__heading">
-              Features
-            </h2>
-            <div class="feature-list">
-              <div class="feature-list__item">
-                <h3>Feature title pending</h3>
-                <p>Feature copy pending.</p>
-              </div>
+            <p class="cs-label">Product views</p>
+            <h2 id="shots-heading" class="cs-heading">Three primary surfaces</h2>
+            <div class="cs-shots">
+              <article class="cs-shot">
+                <div class="cs-shot__copy">
+                  <h3>Public CheckStation site</h3>
+                  <p>
+                    Shows product positioning, pricing entry, and deployed brand
+                    presence.
+                  </p>
+                </div>
+                <div class="cs-browser">
+                  <div class="cs-frame">
+                    <div class="cs-frame__chrome" aria-hidden="true">
+                      <span class="cs-frame__dot"></span>
+                      <span class="cs-frame__dot"></span>
+                      <span class="cs-frame__dot"></span>
+                      <span class="cs-frame__url">checkstation.app</span>
+                    </div>
+                    <div class="cs-frame__stage">
+                      <img
+                        class="cs-frame__media"
+                        src="../assets/images/projects/checkstation/checkstation-public.webp"
+                        width="1600"
+                        height="900"
+                        alt="CheckStation public website"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="cs-shot cs-shot--reverse">
+                <div class="cs-shot__copy">
+                  <h3>Workspace dashboard</h3>
+                  <p>
+                    Shows the authenticated operational SaaS workspace.
+                  </p>
+                </div>
+                <div class="cs-browser">
+                  <div class="cs-frame">
+                    <div class="cs-frame__chrome" aria-hidden="true">
+                      <span class="cs-frame__dot"></span>
+                      <span class="cs-frame__dot"></span>
+                      <span class="cs-frame__dot"></span>
+                      <span class="cs-frame__url">workspace.checkstation.app</span>
+                    </div>
+                    <div class="cs-frame__stage">
+                      <img
+                        class="cs-frame__media"
+                        src="../assets/images/projects/checkstation/checkstation-workspace.webp"
+                        width="1600"
+                        height="900"
+                        alt="CheckStation workspace dashboard"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="cs-shot">
+                <div class="cs-shot__copy">
+                  <h3>Kiosk editor</h3>
+                  <p>
+                    Shows the configurable participant-facing kiosk system.
+                  </p>
+                </div>
+                <div class="cs-browser">
+                  <div class="cs-frame">
+                    <div class="cs-frame__chrome" aria-hidden="true">
+                      <span class="cs-frame__dot"></span>
+                      <span class="cs-frame__dot"></span>
+                      <span class="cs-frame__dot"></span>
+                      <span class="cs-frame__url">workspace · kiosk editor</span>
+                    </div>
+                    <div class="cs-frame__stage">
+                      <img
+                        class="cs-frame__media"
+                        src="../assets/images/projects/checkstation/checkstation-kiosk-editor.webp"
+                        width="1600"
+                        height="900"
+                        alt="CheckStation kiosk editor"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
-        <section class="project-section" aria-labelledby="tech-heading">
+        <!-- What I built -->
+        <section class="cs-section" aria-labelledby="built-heading">
           <div class="container">
-            <h2 id="tech-heading" class="project-section__heading">
-              Tech stack
-            </h2>
-            <div class="tech-groups">
-              <div class="tech-groups__item">
-                <h3>TODO: Group</h3>
-                <ul class="tag-list">
-                  <li class="tag">Pending</li>
+            <p class="cs-label">What I built</p>
+            <h2 id="built-heading" class="cs-heading">End-to-end ownership</h2>
+            <div class="cs-built__grid">
+              <article class="cs-built__item">
+                <h3>Product architecture</h3>
+                <p>
+                  Designed and documented the multi-tenant SaaS architecture
+                  around Organizations, Members, Groups, kiosks, attendance
+                  records, billing, and isolated workspace access.
+                </p>
+              </article>
+              <article class="cs-built__item">
+                <h3>Backend &amp; APIs</h3>
+                <p>
+                  Built the Django + Django REST Framework backend powering
+                  workspace operations, kiosk actions, authentication, billing,
+                  content, and tenant-aware APIs.
+                </p>
+              </article>
+              <article class="cs-built__item">
+                <h3>Web platform</h3>
+                <p>
+                  Built the React + Vite public marketing site and authenticated
+                  workspace application using custom CSS and responsive layouts.
+                </p>
+              </article>
+              <article class="cs-built__item">
+                <h3>Groups / Members / Kiosks</h3>
+                <p>
+                  Implemented the core participation model, including reusable
+                  Members, Groups, configurable kiosk actions, participant-facing
+                  kiosk runtime, and durable history records.
+                </p>
+              </article>
+              <article class="cs-built__item">
+                <h3>Kiosk editor</h3>
+                <p>
+                  Built the visual kiosk customization system so Groups can
+                  configure the participant check-in experience without turning
+                  the product into a generic form builder.
+                </p>
+              </article>
+              <article class="cs-built__item">
+                <h3>Authentication &amp; security</h3>
+                <p>
+                  Implemented owner/staff authentication, Google and Apple OAuth,
+                  email verification, optional owner TOTP 2FA, CSRF protections,
+                  rate limiting, Turnstile, and workspace isolation controls.
+                </p>
+              </article>
+              <article class="cs-built__item">
+                <h3>Billing &amp; subscriptions</h3>
+                <p>
+                  Built Stripe Checkout, webhook processing, Customer Portal
+                  flows, plan entitlements, upgrade/downgrade/cancel behavior, and
+                  the built-in 7-day Business trial.
+                </p>
+              </article>
+              <article class="cs-built__item">
+                <h3>Deployment &amp; services</h3>
+                <p>
+                  Deployed the live platform across CheckStation domains using
+                  Django/Gunicorn, PostgreSQL, Redis, Nginx, Cloudflare, Resend,
+                  and supporting production services.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technology -->
+        <section class="cs-section" aria-labelledby="tech-heading">
+          <div class="container">
+            <p class="cs-label">Technology</p>
+            <h2 id="tech-heading" class="cs-heading">Stack</h2>
+            <div class="cs-tech">
+              <div class="cs-tech__item">
+                <h3>Frontend</h3>
+                <ul>
+                  <li>React 19</li>
+                  <li>Vite 7</li>
+                  <li>JavaScript / JSX</li>
+                  <li>React Router</li>
+                  <li>i18next</li>
+                  <li>Custom CSS</li>
+                </ul>
+              </div>
+              <div class="cs-tech__item">
+                <h3>Backend</h3>
+                <ul>
+                  <li>Python</li>
+                  <li>Django 5.2</li>
+                  <li>Django REST Framework</li>
+                  <li>Gunicorn</li>
+                  <li>WhiteNoise</li>
+                </ul>
+              </div>
+              <div class="cs-tech__item">
+                <h3>Database / Cache</h3>
+                <ul>
+                  <li>PostgreSQL</li>
+                  <li>Redis</li>
+                </ul>
+              </div>
+              <div class="cs-tech__item">
+                <h3>Infrastructure</h3>
+                <ul>
+                  <li>Docker</li>
+                  <li>Nginx</li>
+                  <li>Cloudflare</li>
+                  <li>Linux VPS</li>
+                </ul>
+              </div>
+              <div class="cs-tech__item">
+                <h3>Authentication / Security</h3>
+                <ul>
+                  <li>Django sessions</li>
+                  <li>CSRF</li>
+                  <li>Google OAuth</li>
+                  <li>Apple OAuth</li>
+                  <li>TOTP 2FA</li>
+                  <li>Cloudflare Turnstile</li>
+                  <li>Rate limiting</li>
+                </ul>
+              </div>
+              <div class="cs-tech__item">
+                <h3>Payments</h3>
+                <ul>
+                  <li>Stripe Checkout</li>
+                  <li>Stripe Webhooks</li>
+                  <li>Stripe Customer Portal</li>
+                </ul>
+              </div>
+              <div class="cs-tech__item">
+                <h3>Email / Services</h3>
+                <ul>
+                  <li>Resend</li>
+                  <li>Custom SMTP</li>
+                  <li>Gmail / Outlook / Yahoo SMTP support</li>
+                  <li>Docs service</li>
+                  <li>Status service</li>
+                </ul>
+              </div>
+              <div class="cs-tech__item">
+                <h3>Mobile / Desktop</h3>
+                <ul>
+                  <li>Expo / React Native</li>
+                  <li>Electron</li>
+                  <li>Shared TypeScript packages</li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="project-section" aria-labelledby="gallery-heading">
+        <!-- Current status -->
+        <section class="cs-section" aria-labelledby="status-heading">
           <div class="container">
-            <h2 id="gallery-heading" class="project-section__heading">
-              Gallery
-            </h2>
-            <div class="gallery-grid">
-              <div
-                class="media-placeholder"
-                role="img"
-                aria-label="Screenshot placeholder"
-              >
-                <p class="media-placeholder__label">Screenshot placeholder</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-section" aria-labelledby="links-heading">
-          <div class="container">
-            <h2 id="links-heading" class="project-section__heading">Links</h2>
-            <div class="project-links">
-              <p class="todo-note">
-                Add live site, docs, stores, or GitHub only when marked KNOWN in
-                <code>docs/CONTENT_AND_LINKS.md</code>. Never invent URLs.
+            <p class="cs-label">Current status</p>
+            <h2 id="status-heading" class="cs-heading">Live web platform</h2>
+            <div class="cs-status">
+              <h3>Live web platform</h3>
+              <p>
+                The production web platform is deployed and operational across:
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href="https://checkstation.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >checkstation.app</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://workspace.checkstation.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >workspace.checkstation.app</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://docs.checkstation.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >docs.checkstation.app</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://status.checkstation.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >status.checkstation.app</a
+                  >
+                </li>
+              </ul>
+              <p>
+                Commercial plans, trial behavior, authentication, and Stripe
+                billing are live.
               </p>
             </div>
           </div>
         </section>
 
-        <section class="project-section" aria-labelledby="next-heading">
+        <!-- Mobile + desktop in development -->
+        <section class="cs-section cs-dev" aria-labelledby="dev-heading">
           <div class="container">
-            <h2 id="next-heading" class="sr-only">Next project</h2>
-            <a class="next-project" href="quickcal.html">
+            <div class="cs-dev__panel">
+              <span class="cs-dev__badge">In development</span>
               <div>
-                <p class="next-project__label">Next project</p>
-                <p class="next-project__title">QuickCal</p>
+                <p class="cs-label">Mobile + desktop</p>
+                <h2 id="dev-heading" class="cs-heading">
+                  Cross-platform apps in progress
+                </h2>
+                <p class="cs-lead">
+                  The mobile and desktop applications are currently under
+                  development.
+                </p>
               </div>
-              <span class="btn btn--secondary" aria-hidden="true">View</span>
-            </a>
+              <div class="cs-dev__platforms" aria-label="Target platforms">
+                <span class="cs-chip">iPhone</span>
+                <span class="cs-chip">iPad</span>
+                <span class="cs-chip">Android</span>
+                <span class="cs-chip">macOS</span>
+                <span class="cs-chip">Windows</span>
+              </div>
+              <div class="cs-dev__grid">
+                <article class="cs-dev__item">
+                  <h3>Mobile</h3>
+                  <p>
+                    Expo / React Native for iPhone, iPad, and Android.
+                  </p>
+                </article>
+                <article class="cs-dev__item">
+                  <h3>Desktop</h3>
+                  <p>Electron + React for macOS and Windows.</p>
+                </article>
+              </div>
+              <p class="cs-lead">
+                Both use the same production Django APIs and shared TypeScript
+                packages.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cs-section cs-cta" aria-labelledby="cta-heading">
+          <div class="container">
+            <p class="cs-label">Explore</p>
+            <h2 id="cta-heading" class="cs-heading">Explore CheckStation</h2>
+            <p class="cs-lead">
+              Visit the live product, open a workspace, or check docs and system
+              status.
+            </p>
+            <div class="cs-cta__actions">
+              <a
+                class="cs-link"
+                href="https://checkstation.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit CheckStation</a
+              >
+              <a
+                class="cs-link cs-link--outline"
+                href="https://workspace.checkstation.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open Workspace</a
+              >
+              <a
+                class="cs-link cs-link--outline"
+                href="https://docs.checkstation.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Documentation</a
+              >
+              <a
+                class="cs-link cs-link--outline"
+                href="https://status.checkstation.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >System Status</a
+              >
+            </div>
           </div>
         </section>
       </main>
@@ -214,8 +836,9 @@
             </p>
           </div>
           <nav class="site-footer__nav" aria-label="Footer">
-            <a href="../index.html#work">Work</a>
+            <a href="../index.html#work">Projects</a>
             <a href="../index.html#about">About</a>
+            <a href="../index.html#skills">Skills</a>
             <a href="../index.html#contact">Contact</a>
           </nav>
         </div>
@@ -223,7 +846,6 @@
     </div>
 
     <script src="../js/navigation.js" defer></script>
-    <script src="../js/animations.js" defer></script>
     <script src="../js/project.js" defer></script>
     <script src="../js/main.js" defer></script>
   </body>

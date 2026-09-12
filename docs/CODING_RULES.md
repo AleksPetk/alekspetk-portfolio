@@ -17,7 +17,18 @@ Strict engineering rules for humans and coding agents working on alekspetk.com.
 - **Do not create an alternate architecture** (no parallel design system)
 - **Do not rename major folders casually** (`css`, `js`, `assets`, `projects`, `docs`)
 - New project pages follow `ARCHITECTURE.md` and `PROJECT_PAGE_PLAN.md`
+- Homepage featured projects follow `HOMEPAGE_PLAN.md` + `DESIGN_DIRECTION.md` (**same skeleton, different skin**)
+- **Global header/footer** are shared site chrome — identical markup/behavior on every page; project themes must not restyle them
 - Keep JavaScript minimal and modular as already structured
+
+### Homepage project showcase rules
+
+- **Same skeleton:** Do not change per-project section height, grid, media size/placement, internal spacing, button/tag dimensions, or responsive structure
+- **Different skin:** Each panel may use the product’s own background, accents, title typography, button/tag/border colors, and atmosphere (modifier class on `.project-showcase`)
+- **Panel chrome (required for all):** outer side inset, vertical gap between panels, soft rounded corners, `overflow: hidden` — see `HOMEPAGE_PLAN.md` / `DESIGN_DIRECTION.md` for target values
+- **Identity match:** Homepage panel and detail **main content** must share the same project visual language
+- **Shell:** Detail pages keep global dark header/footer; theme only `main`
+- New projects: reuse `.work__panels` + `.project-showcase`; do not invent a new showcase layout
 
 ## Content rules
 
@@ -63,8 +74,10 @@ Strict engineering rules for humans and coding agents working on alekspetk.com.
 
 Agents must not:
 
-- Replace the dark cinematic direction with a light template look
-- Convert showcases into generic card grids
+- Replace the dark cinematic **site shell** with a light template look (project **panels/pages** may be light when the product brand requires it, e.g. Japan47)
+- Redesign showcase dimensions or invent a new homepage project layout per project
+- Remove outer panel insets / rounded corners on featured project panels
+- Convert showcases into generic equal card grids
 - Add glassmorphism / glow spam
 - Add stock photos
 - Add package.json “for tooling”

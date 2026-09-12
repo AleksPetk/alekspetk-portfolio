@@ -12,6 +12,10 @@
       window.APNav.init();
     }
 
+    if (window.APContact && typeof window.APContact.init === "function") {
+      window.APContact.init();
+    }
+
     if (window.APAnimations && typeof window.APAnimations.init === "function") {
       window.APAnimations.init();
     }

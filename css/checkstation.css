@@ -1,0 +1,691 @@
+/* ==========================================================================
+   checkstation.css — Scoped CheckStation theme for MAIN CONTENT only
+   Global site-header / site-footer stay alekspetk.com dark shell.
+   Light SaaS product world: navy / blue / cyan on white–gray surfaces.
+   ========================================================================== */
+
+.project-checkstation {
+  --cs-ink: #0b1a33;
+  --cs-muted: #5b6b82;
+  --cs-paper: #f3f6fb;
+  --cs-white: #ffffff;
+  --cs-navy: #0a2148;
+  --cs-blue: #1f6fff;
+  --cs-blue-dark: #1557d6;
+  --cs-cyan: #22c7e8;
+  --cs-green: #1f9d65;
+  --cs-line: #d7e0ee;
+  --cs-soft: #e8f1ff;
+  --cs-shadow: 0 14px 36px rgba(10, 33, 72, 0.08);
+  --cs-radius: 0.85rem;
+  --cs-radius-lg: 1.15rem;
+  --cs-sans: "Plus Jakarta Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+.project-checkstation .page__main {
+  background-color: var(--cs-paper);
+  background-image: none;
+  color: var(--cs-ink);
+  font-family: var(--cs-sans);
+}
+
+.project-checkstation .page__main a:not(.btn):not(.cs-link):not(.cs-chip) {
+  color: var(--cs-blue-dark);
+}
+
+.project-checkstation .page__main a:not(.btn):not(.cs-link):not(.cs-chip):hover {
+  color: var(--cs-blue);
+}
+
+.project-checkstation .cs-section {
+  padding-block: clamp(2.75rem, 6vw, 4.75rem);
+  border-bottom: 1px solid var(--cs-line);
+}
+
+.project-checkstation .cs-label {
+  margin-bottom: var(--space-3);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cs-blue);
+}
+
+.project-checkstation .cs-heading {
+  margin-bottom: var(--space-4);
+  font-family: var(--cs-sans);
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--cs-ink);
+}
+
+.project-checkstation .cs-lead {
+  max-width: 38rem;
+  color: var(--cs-muted);
+  font-size: var(--text-md);
+  line-height: 1.6;
+}
+
+.project-checkstation .page__main .btn {
+  border-radius: 0.7rem;
+  font-weight: 600;
+}
+
+.project-checkstation .page__main .btn--primary {
+  background: var(--cs-blue);
+  border-color: var(--cs-blue);
+  color: #fff;
+  box-shadow: none;
+}
+
+.project-checkstation .page__main .btn--primary:hover {
+  background: var(--cs-blue-dark);
+  border-color: var(--cs-blue-dark);
+  color: #fff;
+}
+
+.project-checkstation .page__main .btn--secondary {
+  background: var(--cs-white);
+  border-color: var(--cs-line);
+  color: var(--cs-ink);
+}
+
+.project-checkstation .page__main .btn--secondary:hover {
+  border-color: var(--cs-blue);
+  color: var(--cs-blue-dark);
+  background: var(--cs-white);
+}
+
+.project-checkstation .page__main .btn--ghost {
+  background: transparent;
+  border-color: rgba(31, 111, 255, 0.28);
+  color: var(--cs-blue-dark);
+}
+
+.project-checkstation .page__main .btn--ghost:hover {
+  border-color: var(--cs-blue);
+  color: var(--cs-blue);
+  background: rgba(31, 111, 255, 0.05);
+}
+
+/* —— Hero —— */
+.project-checkstation .cs-hero {
+  padding-block: clamp(2.5rem, 6vw, 4rem) clamp(2.75rem, 6vw, 4.75rem);
+  border-bottom: 1px solid var(--cs-line);
+  background:
+    radial-gradient(
+      ellipse 55% 50% at 92% 8%,
+      rgba(34, 199, 232, 0.14),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 50% 45% at 4% 90%,
+      rgba(31, 111, 255, 0.1),
+      transparent 58%
+    ),
+    linear-gradient(180deg, #eef4ff 0%, var(--cs-paper) 55%, #f7f9fc 100%);
+}
+
+.project-checkstation .cs-hero__grid {
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 2.75rem);
+  align-items: center;
+}
+
+.project-checkstation .cs-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.project-checkstation .cs-hero__title {
+  font-family: var(--cs-sans);
+  font-size: clamp(2.35rem, 5.5vw, 3.35rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  color: var(--cs-navy);
+}
+
+.project-checkstation .cs-hero__desc {
+  max-width: 34rem;
+  color: var(--cs-muted);
+  font-size: var(--text-md);
+  line-height: 1.6;
+}
+
+.project-checkstation .cs-hero__note {
+  max-width: 34rem;
+  color: var(--cs-muted);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+
+.project-checkstation .cs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-checkstation .cs-meta__item {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--cs-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--cs-ink);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.project-checkstation .cs-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-1);
+}
+
+.project-checkstation .cs-browser {
+  min-width: 0;
+}
+
+.project-checkstation .cs-frame {
+  overflow: hidden;
+  border: 1px solid var(--cs-line);
+  border-radius: var(--cs-radius-lg);
+  background: var(--cs-white);
+  box-shadow: var(--cs-shadow);
+}
+
+.project-checkstation .cs-frame__chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--cs-line);
+  background: #eef3fa;
+}
+
+.project-checkstation .cs-frame__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #c5d0e0;
+}
+
+.project-checkstation .cs-frame__url {
+  margin-left: 0.5rem;
+  flex: 1;
+  min-width: 0;
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.3rem;
+  background: var(--cs-white);
+  border: 1px solid var(--cs-line);
+  font-size: 0.7rem;
+  color: var(--cs-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-checkstation .cs-frame__stage {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background:
+    linear-gradient(160deg, var(--cs-soft) 0%, #f7faff 50%, #e8f7fb 100%);
+}
+
+.project-checkstation .cs-frame__stage:has(.cs-frame__media) {
+  aspect-ratio: auto;
+  background: var(--cs-white);
+}
+
+.project-checkstation .cs-frame__media {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-checkstation .cs-frame__placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--space-5);
+  text-align: center;
+}
+
+.project-checkstation .cs-frame__placeholder p {
+  max-width: 16rem;
+  color: var(--cs-muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.project-checkstation .cs-frame__placeholder code {
+  font-size: 0.68rem;
+  word-break: break-all;
+}
+
+/* —— Overview —— */
+.project-checkstation .cs-overview {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.project-checkstation .cs-overview__item {
+  padding: var(--space-5);
+  border: 1px solid var(--cs-line);
+  border-radius: var(--cs-radius-lg);
+  background: var(--cs-white);
+  box-shadow: var(--cs-shadow);
+}
+
+.project-checkstation .cs-overview__item h3 {
+  margin-bottom: var(--space-3);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cs-blue);
+}
+
+.project-checkstation .cs-overview__item p {
+  color: var(--cs-muted);
+  line-height: 1.65;
+  font-size: var(--text-sm);
+}
+
+.project-checkstation .cs-overview__item p + p {
+  margin-top: var(--space-3);
+}
+
+/* —— Features —— */
+.project-checkstation .cs-features {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--cs-line);
+}
+
+.project-checkstation .cs-feature {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--cs-line);
+}
+
+.project-checkstation .cs-feature__num {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: rgba(31, 111, 255, 0.4);
+}
+
+.project-checkstation .cs-feature h3 {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-md);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.project-checkstation .cs-feature p {
+  color: var(--cs-muted);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+
+/* —— Screenshots —— */
+.project-checkstation .cs-shots {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.project-checkstation .cs-shot {
+  display: grid;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.project-checkstation .cs-shot__copy h3 {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.project-checkstation .cs-shot__copy p {
+  color: var(--cs-muted);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  max-width: 28rem;
+}
+
+/* —— Built —— */
+.project-checkstation .cs-built__grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.project-checkstation .cs-built__item {
+  padding: var(--space-5);
+  border: 1px solid var(--cs-line);
+  border-radius: var(--cs-radius);
+  background: var(--cs-white);
+}
+
+.project-checkstation .cs-built__item h3 {
+  margin-bottom: var(--space-2);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cs-blue);
+}
+
+.project-checkstation .cs-built__item p {
+  color: var(--cs-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+/* —— Tech —— */
+.project-checkstation .cs-tech {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.project-checkstation .cs-tech__item {
+  padding: var(--space-5);
+  border: 1px solid var(--cs-line);
+  border-radius: var(--cs-radius);
+  background: var(--cs-white);
+}
+
+.project-checkstation .cs-tech__item h3 {
+  margin-bottom: var(--space-3);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cs-blue);
+}
+
+.project-checkstation .cs-tech__item ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-checkstation .cs-tech__item li {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--cs-line);
+  border-radius: 999px;
+  background: #f5f8fc;
+  color: var(--cs-ink);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* —— Status —— */
+.project-checkstation .cs-status {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid rgba(31, 157, 101, 0.22);
+  border-radius: var(--cs-radius-lg);
+  background:
+    linear-gradient(135deg, rgba(31, 157, 101, 0.06), transparent 55%),
+    var(--cs-white);
+}
+
+.project-checkstation .cs-status h3 {
+  margin-bottom: var(--space-2);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cs-green);
+}
+
+.project-checkstation .cs-status p {
+  color: var(--cs-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.project-checkstation .cs-status ul {
+  display: grid;
+  gap: 0.35rem;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-checkstation .cs-status li {
+  color: var(--cs-ink);
+  font-size: var(--text-sm);
+  font-weight: 550;
+}
+
+.project-checkstation .cs-status li a {
+  color: var(--cs-blue-dark);
+  text-decoration: none;
+}
+
+.project-checkstation .cs-status li a:hover {
+  color: var(--cs-blue);
+}
+
+/* —— In development —— */
+.project-checkstation .cs-dev {
+  border-bottom: 1px solid var(--cs-line);
+  background:
+    linear-gradient(180deg, #e8eef8 0%, #f1f5fb 100%);
+}
+
+.project-checkstation .cs-dev__panel {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  border: 1px dashed rgba(10, 33, 72, 0.22);
+  border-radius: var(--cs-radius-lg);
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(31, 111, 255, 0.025) 10px,
+      rgba(31, 111, 255, 0.025) 20px
+    ),
+    rgba(255, 255, 255, 0.72);
+}
+
+.project-checkstation .cs-dev__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(10, 33, 72, 0.18);
+  background: rgba(10, 33, 72, 0.06);
+  color: var(--cs-navy);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-checkstation .cs-dev__badge::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--cs-navy);
+  box-shadow: 0 0 0 3px rgba(10, 33, 72, 0.12);
+}
+
+.project-checkstation .cs-dev__platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-checkstation .cs-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(10, 33, 72, 0.14);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--cs-navy);
+  font-size: 0.8rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.project-checkstation .cs-dev__grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.project-checkstation .cs-dev__item h3 {
+  margin-bottom: var(--space-2);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cs-blue);
+}
+
+.project-checkstation .cs-dev__item p {
+  color: var(--cs-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+/* —— CTA —— */
+.project-checkstation .cs-cta {
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 50% 0%,
+      rgba(34, 199, 232, 0.16),
+      transparent 58%
+    ),
+    linear-gradient(180deg, var(--cs-navy) 0%, #07152e 100%);
+  border-bottom: none;
+  color: #eef4ff;
+}
+
+.project-checkstation .cs-cta .cs-label {
+  color: var(--cs-cyan);
+}
+
+.project-checkstation .cs-cta .cs-heading {
+  color: #fff;
+}
+
+.project-checkstation .cs-cta .cs-lead {
+  color: rgba(238, 244, 255, 0.72);
+}
+
+.project-checkstation .cs-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.project-checkstation .cs-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.7rem;
+  background: var(--cs-blue);
+  border: 1px solid var(--cs-blue);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.project-checkstation .cs-link:hover {
+  background: #3a82ff;
+  border-color: #3a82ff;
+  color: #fff;
+}
+
+.project-checkstation .cs-link--outline {
+  background: transparent;
+  border-color: rgba(238, 244, 255, 0.28);
+  color: #eef4ff;
+}
+
+.project-checkstation .cs-link--outline:hover {
+  border-color: var(--cs-cyan);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 768px) {
+  .project-checkstation .cs-hero__grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+
+  .project-checkstation .cs-overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .project-checkstation .cs-shot {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: center;
+  }
+
+  .project-checkstation .cs-shot--reverse {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  }
+
+  .project-checkstation .cs-shot--reverse .cs-shot__copy {
+    order: 2;
+  }
+
+  .project-checkstation .cs-built__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-checkstation .cs-tech {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-checkstation .cs-dev__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-checkstation .cs-tech {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .project-checkstation .cs-hero__actions,
+  .project-checkstation .cs-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-checkstation .cs-hero__actions .btn,
+  .project-checkstation .cs-link {
+    width: 100%;
+    justify-content: center;
+  }
+}

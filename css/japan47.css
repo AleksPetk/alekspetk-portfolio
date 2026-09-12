@@ -1,0 +1,612 @@
+/* ==========================================================================
+   japan47.css — Scoped Japan47 case-study theme for MAIN CONTENT only
+   Global site-header / site-footer stay alekspetk.com dark shell.
+   Hierarchy: portfolio header → Japan47 content world → portfolio footer
+   ========================================================================== */
+
+.project-japan47 {
+  --j47-ink: #20251f;
+  --j47-muted: #687067;
+  --j47-paper: #fbfaf5;
+  --j47-white: #ffffff;
+  --j47-red: #b43832;
+  --j47-red-dark: #862721;
+  --j47-sage: #dbe3d4;
+  --j47-blush: #f3e8e4;
+  --j47-line: #d9d8cf;
+  --j47-gold: #bd8c37;
+  --j47-shadow: 0 18px 50px rgba(31, 42, 31, 0.09);
+  --j47-radius: 0.5rem;
+  --j47-radius-lg: 0.75rem;
+  --j47-serif: "Shippori Mincho", "Iowan Old Style", Palatino, "Palatino Linotype",
+    Georgia, serif;
+  --j47-sans: "DM Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Theme applies inside main only — not header/footer */
+.project-japan47 .page__main {
+  background-color: var(--j47-paper);
+  background-image: none;
+  color: var(--j47-ink);
+  font-family: var(--j47-sans);
+}
+
+.project-japan47 .page__main a:not(.btn):not(.j47-store) {
+  color: var(--j47-red);
+}
+
+.project-japan47 .page__main a:not(.btn):not(.j47-store):hover {
+  color: var(--j47-red-dark);
+}
+
+/* —— Shared section chrome —— */
+.project-japan47 .j47-section {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+  border-bottom: 1px solid var(--j47-line);
+}
+
+.project-japan47 .j47-label {
+  margin-bottom: var(--space-3);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--j47-red);
+}
+
+.project-japan47 .j47-heading {
+  margin-bottom: var(--space-4);
+  font-family: var(--j47-serif);
+  font-size: clamp(1.85rem, 3.5vw, 2.65rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--j47-ink);
+}
+
+.project-japan47 .j47-lead {
+  max-width: 38rem;
+  color: var(--j47-muted);
+  font-size: var(--text-md);
+  line-height: 1.65;
+}
+
+.project-japan47 .j47-note {
+  margin-top: var(--space-3);
+  max-width: 40rem;
+  padding: 0.75rem 1rem;
+  border: 1px dashed var(--j47-line);
+  border-radius: var(--j47-radius);
+  background: rgba(219, 227, 212, 0.35);
+  color: var(--j47-muted);
+  font-size: var(--text-sm);
+}
+
+.project-japan47 .j47-note code {
+  font-size: 0.9em;
+}
+
+/* —— Buttons —— */
+.project-japan47 .page__main .btn {
+  border-radius: 0.35rem;
+  font-family: var(--j47-sans);
+  font-weight: 600;
+}
+
+.project-japan47 .page__main .btn--primary {
+  background: var(--j47-red);
+  color: var(--j47-white);
+  border-color: var(--j47-red);
+  box-shadow: none;
+}
+
+.project-japan47 .page__main .btn--primary:hover {
+  background: var(--j47-red-dark);
+  border-color: var(--j47-red-dark);
+  color: var(--j47-white);
+}
+
+.project-japan47 .page__main .btn--secondary {
+  background: var(--j47-white);
+  color: var(--j47-ink);
+  border: 1px solid var(--j47-ink);
+}
+
+.project-japan47 .page__main .btn--secondary:hover {
+  background: var(--j47-ink);
+  color: var(--j47-white);
+}
+
+.project-japan47 .page__main .btn--ghost {
+  background: transparent;
+  color: var(--j47-ink);
+  border: 1px solid var(--j47-line);
+}
+
+.project-japan47 .page__main .btn--ghost:hover {
+  border-color: var(--j47-ink);
+  color: var(--j47-ink);
+}
+
+/* —— Hero —— */
+.project-japan47 .j47-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3rem, 7vw, 5rem) clamp(3.5rem, 8vw, 6rem);
+  border-bottom: 1px solid var(--j47-line);
+  background:
+    radial-gradient(ellipse 70% 55% at 88% 18%, rgba(180, 56, 50, 0.08), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 12% 80%, rgba(219, 227, 212, 0.55), transparent 55%),
+    var(--j47-paper);
+}
+
+.project-japan47 .j47-hero__grid {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+.project-japan47 .j47-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 36rem;
+}
+
+.project-japan47 .j47-hero__title {
+  font-family: var(--j47-serif);
+  font-size: clamp(3rem, 8vw, 5.25rem);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  color: var(--j47-ink);
+}
+
+.project-japan47 .j47-hero__title span {
+  color: var(--j47-red);
+}
+
+.project-japan47 .j47-hero__desc {
+  color: var(--j47-muted);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  line-height: 1.65;
+  max-width: 32rem;
+}
+
+.project-japan47 .j47-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: var(--space-1);
+}
+
+.project-japan47 .j47-meta__item {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--j47-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--j47-ink);
+}
+
+.project-japan47 .j47-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.project-japan47 .j47-browser {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-japan47 .j47-frame {
+  overflow: hidden;
+  border: 1px solid var(--j47-line);
+  border-radius: var(--j47-radius-lg);
+  background: var(--j47-white);
+  box-shadow: var(--j47-shadow);
+}
+
+.project-japan47 .j47-frame__chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--j47-line);
+  background: #f3f2ec;
+}
+
+.project-japan47 .j47-frame__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #d0cfc6;
+}
+
+.project-japan47 .j47-frame__url {
+  margin-left: 0.5rem;
+  flex: 1;
+  min-width: 0;
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.3rem;
+  background: var(--j47-white);
+  border: 1px solid var(--j47-line);
+  font-size: 0.7rem;
+  color: var(--j47-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-japan47 .j47-frame__stage {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background:
+    linear-gradient(160deg, var(--j47-blush) 0%, var(--j47-paper) 45%, var(--j47-sage) 100%);
+}
+
+.project-japan47 .j47-frame__stage:has(.j47-frame__media) {
+  aspect-ratio: auto;
+  background: var(--j47-white);
+}
+
+.project-japan47 .j47-frame__stage--phone {
+  aspect-ratio: 9 / 19.5;
+  max-width: 16rem;
+  margin-inline: auto;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.project-japan47 .j47-frame__stage--tablet {
+  aspect-ratio: 4 / 3;
+}
+
+.project-japan47 .j47-frame__media {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-japan47 .j47-frame__placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--space-5);
+  text-align: center;
+}
+
+.project-japan47 .j47-frame__placeholder p {
+  max-width: 18rem;
+  color: var(--j47-muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+/* —— Overview —— */
+.project-japan47 .j47-overview {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.project-japan47 .j47-overview__item h3 {
+  margin-bottom: var(--space-3);
+  font-family: var(--j47-serif);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--j47-ink);
+}
+
+.project-japan47 .j47-overview__item p {
+  max-width: 36rem;
+  color: var(--j47-muted);
+  line-height: 1.7;
+}
+
+/* —— Features —— */
+.project-japan47 .j47-features {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--j47-line);
+}
+
+.project-japan47 .j47-feature {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--j47-line);
+}
+
+.project-japan47 .j47-feature__num {
+  font-family: var(--j47-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--j47-red);
+  line-height: 1.2;
+}
+
+.project-japan47 .j47-feature h3 {
+  margin-bottom: var(--space-2);
+  font-family: var(--j47-serif);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.project-japan47 .j47-feature p {
+  max-width: 40rem;
+  color: var(--j47-muted);
+  line-height: 1.65;
+}
+
+/* —— Web gallery —— */
+.project-japan47 .j47-web-grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.project-japan47 .j47-web-secondary {
+  display: grid;
+  gap: var(--space-5);
+}
+
+/* —— Mobile —— */
+.project-japan47 .j47-mobile {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.project-japan47 .j47-mobile__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 32rem;
+}
+
+.project-japan47 .j47-mobile__devices {
+  display: grid;
+  gap: var(--space-5);
+  align-items: end;
+}
+
+.project-japan47 .j47-device {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-japan47 .j47-device--phone .j47-frame {
+  max-width: 16rem;
+  margin-inline: auto;
+  border-radius: 1.4rem;
+}
+
+.project-japan47 .j47-device--phone .j47-frame__chrome {
+  display: none;
+}
+
+.project-japan47 .j47-store-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.project-japan47 .j47-store {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0.65rem 1.15rem;
+  border: 1px solid var(--j47-ink);
+  border-radius: 0.35rem;
+  background: var(--j47-ink);
+  color: var(--j47-white);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-japan47 .j47-store:hover {
+  background: var(--j47-red);
+  border-color: var(--j47-red);
+  color: var(--j47-white);
+}
+
+.project-japan47 .j47-store--outline {
+  background: transparent;
+  color: var(--j47-ink);
+}
+
+.project-japan47 .j47-store--outline:hover {
+  background: var(--j47-ink);
+  color: var(--j47-white);
+}
+
+/* —— Technology —— */
+.project-japan47 .j47-tech {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.project-japan47 .j47-tech__item {
+  padding: var(--space-5);
+  border: 1px solid var(--j47-line);
+  border-radius: var(--j47-radius-lg);
+  background: var(--j47-white);
+}
+
+.project-japan47 .j47-tech__item h3 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--j47-red);
+}
+
+.project-japan47 .j47-tech__item ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-japan47 .j47-tech__item li {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--j47-line);
+  border-radius: 999px;
+  background: var(--j47-paper);
+  color: var(--j47-muted);
+  font-size: var(--text-sm);
+}
+
+/* —— What I built —— */
+.project-japan47 .j47-built {
+  background:
+    linear-gradient(180deg, rgba(243, 232, 228, 0.55), transparent 40%),
+    var(--j47-paper);
+}
+
+.project-japan47 .j47-built__grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.project-japan47 .j47-built__item {
+  padding: var(--space-5);
+  border-left: 3px solid var(--j47-red);
+  background: var(--j47-white);
+  border-top: 1px solid var(--j47-line);
+  border-right: 1px solid var(--j47-line);
+  border-bottom: 1px solid var(--j47-line);
+  border-radius: 0 var(--j47-radius) var(--j47-radius) 0;
+}
+
+.project-japan47 .j47-built__item h3 {
+  margin-bottom: var(--space-2);
+  font-family: var(--j47-serif);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.project-japan47 .j47-built__item p {
+  color: var(--j47-muted);
+  line-height: 1.65;
+  max-width: 40rem;
+}
+
+/* —— CTA / Try it —— */
+.project-japan47 .j47-cta {
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 0%, rgba(180, 56, 50, 0.1), transparent 60%),
+    var(--j47-ink);
+  color: #f4f6f2;
+  border-bottom: none;
+}
+
+.project-japan47 .j47-cta .j47-label {
+  color: #e8b4b0;
+}
+
+.project-japan47 .j47-cta .j47-heading {
+  color: #fbfaf5;
+}
+
+.project-japan47 .j47-cta .j47-lead {
+  color: rgba(251, 250, 245, 0.72);
+}
+
+.project-japan47 .j47-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.project-japan47 .j47-cta .btn--primary {
+  background: var(--j47-red);
+  border-color: var(--j47-red);
+}
+
+.project-japan47 .j47-cta .btn--secondary {
+  background: transparent;
+  color: #fbfaf5;
+  border-color: rgba(251, 250, 245, 0.35);
+}
+
+.project-japan47 .j47-cta .btn--secondary:hover {
+  background: #fbfaf5;
+  color: var(--j47-ink);
+}
+
+/* —— Desktop / tablet layout —— */
+@media (min-width: 768px) {
+  .project-japan47 .j47-hero__grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+  }
+
+  .project-japan47 .j47-overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .project-japan47 .j47-web-secondary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-japan47 .j47-mobile {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .project-japan47 .j47-mobile__devices {
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  }
+
+  .project-japan47 .j47-tech {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-japan47 .j47-built__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-japan47 .j47-tech {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .project-japan47 .j47-feature {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .project-japan47 .j47-hero__actions,
+  .project-japan47 .j47-store-row,
+  .project-japan47 .j47-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-japan47 .j47-hero__actions .btn,
+  .project-japan47 .j47-store,
+  .project-japan47 .j47-cta__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-japan47 .j47-device--phone .j47-frame {
+    max-width: 14rem;
+  }
+}
