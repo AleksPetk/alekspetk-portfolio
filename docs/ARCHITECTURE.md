@@ -41,9 +41,16 @@ Keep this architecture intentionally simple. Do not introduce alternate structur
 │       └── resume/
 │
 ├── projects/
-│   ├── checkstation.html
-│   ├── quickcal.html
-│   └── game-of-night.html
+│   ├── checkstation/
+│   │   └── index.html
+│   ├── quickcal/
+│   │   └── index.html
+│   ├── japan47/
+│   │   └── index.html
+│   ├── checkstation.html      # tiny redirect → /projects/checkstation/
+│   ├── quickcal.html          # tiny redirect → /projects/quickcal/
+│   ├── japan47.html           # tiny redirect → /projects/japan47/
+│   └── game-of-night.html     # unpublished / noindex stub
 │
 └── docs/                      # Source of truth for agents & humans
 ```
@@ -100,11 +107,13 @@ Optional local-only originals may live outside the published tree (see `.gitigno
 
 ## Project-page organization
 
-Each major project is a standalone HTML file in `projects/` sharing:
+Each major project lives at `projects/<slug>/index.html` (clean public URL `/projects/<slug>/`), sharing:
 
 - global header/footer patterns
 - `project.css` section structure
-- relative paths back to `../css`, `../js`, `../assets`, `../index.html`
+- relative paths back to `../../css`, `../../js`, `../../assets`, `../../index.html`
+
+Legacy `projects/<slug>.html` files are tiny redirects to the clean URL (meta refresh + JS + fallback link).
 
 Shared semantic blocks: hero, overview, features, tech, gallery, links/CTA, then global footer.
 
@@ -115,11 +124,12 @@ Do **not** include a “Next project” section by default.
 | From | To CSS/JS/assets |
 | --- | --- |
 | `/index.html`, `/404.html` | `css/...`, `js/...`, `assets/...` |
-| `/projects/*.html` | `../css/...`, `../js/...`, `../assets/...` |
+| `/projects/<slug>/index.html` | `../../css/...`, `../../js/...`, `../../assets/...` |
+| `/projects/<slug>.html` (redirect stubs) | no local asset deps |
 
 Anchors on the homepage use `#work`, `#about`, `#skills`, `#contact`.
 
-From project pages, homepage anchors use `../index.html#work` (etc.).
+From project pages, homepage anchors use `../../index.html#work` (etc.).
 
 ## GitHub Pages compatibility
 
@@ -132,11 +142,13 @@ From project pages, homepage anchors use `../index.html#work` (etc.).
 ## How to add a new project page
 
 1. Add approved content/links to `docs/CONTENT_AND_LINKS.md`
-2. Create `projects/<slug>.html` using an existing project page as the template
-3. Add `assets/images/projects/<slug>/`
-4. Add a homepage showcase article in `#work` (large section, not a tiny card)
-5. Update `ASSET_PLAN.md` and roadmap status as needed
-6. Do **not** invent URLs or screenshots
+2. Create `projects/<slug>/index.html` using an existing project page as the template (paths use `../../`)
+3. Add a tiny `projects/<slug>.html` redirect to `/projects/<slug>/`
+4. Add `assets/images/projects/<slug>/`
+5. Add a homepage showcase article in `#work` linking to `projects/<slug>/`
+6. Add the clean URL to `sitemap.xml`
+7. Update `ASSET_PLAN.md` and roadmap status as needed
+8. Do **not** invent URLs or screenshots
 7. Do **not** add a “Next project” section unless explicitly requested
 
 ## What not to do

@@ -59,7 +59,7 @@ Primary screenshot slots (only these three on the detail page):
 
 Shipped optimized WebP (no raw originals in repo).
 
-Detail page (`projects/checkstation.html`):
+Detail page (`projects/checkstation/`):
 
 - Wide browser-style frames; natural aspect ratio for images when wired
 - No under-image captions; short contextual text beside / above
@@ -86,7 +86,7 @@ Shipped optimized WebP (no raw originals in repo):
 - `quickcal-phone-home.webp` — Home / Quick Log (600×1200)
 - `quickcal-phone-lifetime.webp` — Lifetime unlock (600×1200)
 
-Detail page (`projects/quickcal.html`):
+Detail page (`projects/quickcal/`):
 
 - Tall phone frames only; natural aspect ratio (`width: 100%`, `height: auto`)
 - Do **not** use 16:9 browser-style boxes
@@ -134,7 +134,7 @@ Shipped optimized WebP (no raw originals in repo):
 
 Frames use natural image aspect ratios (`width: 100%`, `height: auto`) so full screenshots are preserved without stretch.
 
-Case-study page (`projects/japan47.html`) uses Japan47-native cream / red editorial styling scoped in `css/japan47.css`. Do not apply that theme to the homepage.
+Case-study page (`projects/japan47/`) uses Japan47-native cream / red editorial styling scoped in `css/japan47.css`. Do not apply that theme to the homepage.
 
 ---
 

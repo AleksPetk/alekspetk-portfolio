@@ -36,14 +36,14 @@ When a value becomes known, update this file **before** or **with** the HTML cha
 
 | Field | Status | Value |
 | --- | --- | --- |
-| Project page | KNOWN | `projects/checkstation.html` |
+| Project page | KNOWN | `projects/checkstation/` |
 | Short description (homepage) | KNOWN | A configurable SaaS platform for attendance, self-service kiosks, and workspace activity tracking. |
-| Long overview / problem / role | KNOWN | See case-study Overview on `projects/checkstation.html` |
+| Long overview / problem / role | KNOWN | See case-study Overview on `projects/checkstation/` |
 | Project type / category | KNOWN | Live SaaS platform / Attendance & check-in |
 | Status | KNOWN | Live web platform (mobile + desktop apps IN DEVELOPMENT) |
-| Technology tags / stack groups | KNOWN | See Technology section on `projects/checkstation.html` |
+| Technology tags / stack groups | KNOWN | See Technology section on `projects/checkstation/` |
 | Homepage tags | KNOWN | Web · SaaS · Django · React |
-| What I built details | KNOWN | See “What I built” on `projects/checkstation.html` |
+| What I built details | KNOWN | See “What I built” on `projects/checkstation/` |
 | Core features | KNOWN | Multi-tenant workspaces, Owner & staff, Members, Groups, Self-service kiosks, Kiosk editor, Attendance history, Plans & billing, Auth & security, Localization & email |
 | Live website | KNOWN | `https://checkstation.app` |
 | Workspace / app URL | KNOWN | `https://workspace.checkstation.app` |
@@ -55,7 +55,7 @@ When a value becomes known, update this file **before** or **with** the HTML cha
 | GitHub repository | TODO | |
 | Demo | NOT APPLICABLE | |
 | Screenshots | KNOWN | `checkstation-public.webp`, `checkstation-workspace.webp`, `checkstation-kiosk-editor.webp` |
-| Homepage showcase | KNOWN | Featured Projects #01 → `projects/checkstation.html` |
+| Homepage showcase | KNOWN | Featured Projects #01 → `projects/checkstation/` |
 
 Notes:
 
@@ -72,14 +72,14 @@ Notes:
 
 | Field | Status | Value |
 | --- | --- | --- |
-| Project page | KNOWN | `projects/quickcal.html` |
+| Project page | KNOWN | `projects/quickcal/` |
 | Short description (homepage) | KNOWN | A fast offline-first calorie counter built around a personal food library and one-tap logging. |
-| Long overview / problem / role | KNOWN | See case-study Overview on `projects/quickcal.html` |
+| Long overview / problem / role | KNOWN | See case-study Overview on `projects/quickcal/` |
 | Project type / category | KNOWN | Mobile app / Calorie tracking (iOS + Android) |
 | Status | KNOWN | Live (App Store + Google Play) |
-| Technology tags / stack groups | KNOWN | See Technology section on `projects/quickcal.html` |
+| Technology tags / stack groups | KNOWN | See Technology section on `projects/quickcal/` |
 | Homepage tags | KNOWN | iOS · Android · Offline-first |
-| What I built details | KNOWN | See “What I built” on `projects/quickcal.html` |
+| What I built details | KNOWN | See “What I built” on `projects/quickcal/` |
 | Core features | KNOWN | Quick Log, Portion Logging, Personal Library, Offline Reference Foods, Today & History, Goals & Planner, Local-First Data |
 | Website | NOT APPLICABLE | No web product |
 | App Store | KNOWN | `https://apps.apple.com/jp/app/quickcal-calorie-counter/id6797413596?l=en-US` |
@@ -87,7 +87,7 @@ Notes:
 | GitHub repository | TODO | |
 | Demo | NOT APPLICABLE | |
 | Screenshots | KNOWN | `quickcal-phone-home.webp`, `quickcal-phone-lifetime.webp` |
-| Homepage showcase | KNOWN | Featured Projects #02 → `projects/quickcal.html` |
+| Homepage showcase | KNOWN | Featured Projects #02 → `projects/quickcal/` |
 
 Notes:
 
@@ -123,14 +123,14 @@ Notes:
 
 | Field | Status | Value |
 | --- | --- | --- |
-| Project page | KNOWN | `projects/japan47.html` |
+| Project page | KNOWN | `projects/japan47/` |
 | Short description | KNOWN | Community travel guide for Japan’s 9 regions and 47 prefectures (web + Expo mobile; shared Django REST API) |
-| Long overview / problem / role | KNOWN | See case-study Overview on `projects/japan47.html` |
+| Long overview / problem / role | KNOWN | See case-study Overview on `projects/japan47/` |
 | Project type | KNOWN | Travel platform (Web + iOS + Android) |
 | Status | KNOWN | Live |
-| Technology tags / stack groups | KNOWN | See Technology section on `projects/japan47.html` |
+| Technology tags / stack groups | KNOWN | See Technology section on `projects/japan47/` |
 | Homepage tags | KNOWN | Web · iOS · Android |
-| What I built details | KNOWN | See “What I built” on `projects/japan47.html` |
+| What I built details | KNOWN | See “What I built” on `projects/japan47/` |
 | Core features | KNOWN | Regions, Prefectures, Places & discovery, Community contributions, Reviews & profiles, Personal travel, Mobile access, Media & support |
 | Live website | KNOWN | `https://japan47.alekspetk.com` |
 | App Store | KNOWN | `https://apps.apple.com/jp/app/japan47/id6796367175?l=en-US` |
@@ -138,7 +138,7 @@ Notes:
 | GitHub repository | TODO | |
 | Screenshots | KNOWN | Optimized WebP in `assets/images/projects/japan47/` |
 | Community / user metrics | TODO | Do not invent counts |
-| Homepage showcase | KNOWN | Featured Projects #03 → `projects/japan47.html` |
+| Homepage showcase | KNOWN | Featured Projects #03 → `projects/japan47/` |
 
 Notes:
 

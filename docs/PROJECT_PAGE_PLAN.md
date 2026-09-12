@@ -4,10 +4,10 @@ Reusable specification for major project detail pages.
 
 Initial pages:
 
-- `projects/checkstation.html`
-- `projects/quickcal.html` (QuickCal-native theme via `css/quickcal.css`)
+- `projects/checkstation/`
+- `projects/quickcal/` (QuickCal-native theme via `css/quickcal.css`)
 - `projects/game-of-night.html`
-- `projects/japan47.html` (Japan47-native theme via `css/japan47.css`)
+- `projects/japan47/` (Japan47-native theme via `css/japan47.css`)
 
 ## Shared layout
 
@@ -32,11 +32,11 @@ Do **not** invent project-specific headers or footers (no light Japan47 nav, etc
 Reuse homepage markup (`.site-header`, nav toggle, edge divider). Paths from `projects/`:
 
 - AP → `../index.html`
-- Work → `../index.html#work`
-- About → `../index.html#about`
-- Skills → `../index.html#skills`
-- Contact → `../index.html#contact`
-- Resume → global EN/JA dropdown (same shared markup/behavior as homepage; PDF paths under `../assets/documents/resume/`)
+- Work → `../../index.html#work`
+- About → `../../index.html#about`
+- Skills → `../../index.html#skills`
+- Contact → `../../index.html#contact`
+- Resume → global EN/JA dropdown (same shared markup/behavior as homepage; PDF paths under `../../assets/documents/resume/`)
 
 Include `navigation.js` (+ `main.js` bootstrap) so sticky/mobile/Resume menu behavior matches.
 

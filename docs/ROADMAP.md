@@ -214,7 +214,7 @@ Complete CheckStation detail content within known facts.
 
 ### Work included
 
-- Substantial SaaS case study (`projects/checkstation.html` + `css/checkstation.css`)
+- Substantial SaaS case study (`projects/checkstation/` + `css/checkstation.css`)
 - Global header/footer preserved; light navy/blue SaaS theme scoped to main
 - Homepage showcase skin `.project-showcase--checkstation` (same structure)
 - Verified links: checkstation.app, workspace, docs, status
@@ -244,7 +244,7 @@ Complete QuickCal detail content within known facts.
 
 ### Work included
 
-- Compact mobile-oriented case study (`projects/quickcal.html` + `css/quickcal.css`)
+- Compact mobile-oriented case study (`projects/quickcal/` + `css/quickcal.css`)
 - Global header/footer preserved; theme scoped to main
 - Homepage showcase skin `.project-showcase--quickcal` (same structure)
 - Verified App Store + Google Play links

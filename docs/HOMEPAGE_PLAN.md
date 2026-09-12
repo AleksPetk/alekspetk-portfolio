@@ -131,7 +131,7 @@ Example — Japan47 (`.project-showcase--japan47`):
 - Japan red accents
 - dark charcoal / green text
 - Shippori Mincho (serif) title: cream/ink `Japan` + red `47`
-- light editorial language matching `projects/japan47.html`
+- light editorial language matching `projects/japan47/`
 
 Example — QuickCal (`.project-showcase--quickcal`):
 
@@ -140,7 +140,7 @@ Example — QuickCal (`.project-showcase--quickcal`):
 - dark text / muted gray copy
 - Plus Jakarta Sans title
 - 16:9 media slot keeps shared dimensions; inner phone presentation holds portrait screenshots later
-- light native-mobile language matching `projects/quickcal.html`
+- light native-mobile language matching `projects/quickcal/`
 
 Example — CheckStation (`.project-showcase--checkstation`):
 
@@ -148,7 +148,7 @@ Example — CheckStation (`.project-showcase--checkstation`):
 - white / light-gray text
 - Plus Jakarta Sans title
 - shared 16:10 media slot prepared for `checkstation-workspace.webp`
-- language matching `projects/checkstation.html` (live SaaS; apps in development are detail-page only)
+- language matching `projects/checkstation/` (live SaaS; apps in development are detail-page only)
 
 Do **not** invent a separate incompatible layout for a new project. Reuse `.project-showcase` + a project modifier class.
 
@@ -176,7 +176,7 @@ Panels live in `.work__panels` and must not touch each other or the page edges.
 
 Homepage showcase identity ↔ detail page **main content** identity.
 
-The panel is a **visual preview** of the richer case-study page (e.g. Japan47 cream/red editorial continues inside `projects/japan47.html` `main` via `css/japan47.css`).
+The panel is a **visual preview** of the richer case-study page (e.g. Japan47 cream/red editorial continues inside `projects/japan47/` `main` via `css/japan47.css`).
 
 Global **header and footer** stay the dark alekspetk.com shell on every page — never project-themed.
 
