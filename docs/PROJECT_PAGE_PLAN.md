@@ -31,18 +31,18 @@ Do **not** invent project-specific headers or footers (no light Japan47 nav, etc
 
 Reuse homepage markup (`.site-header`, nav toggle, edge divider). Paths from `projects/`:
 
-- AP → `../index.html`
-- Work → `../../index.html#work`
-- About → `../../index.html#about`
-- Skills → `../../index.html#skills`
-- Contact → `../../index.html#contact`
+- AP → `/`
+- Projects → `/#projects`
+- About → `/#about`
+- Skills → `/#skills`
+- Contact → `/#contact`
 - Resume → global EN/JA dropdown (same shared markup/behavior as homepage; PDF paths under `../../assets/documents/resume/`)
 
 Include `navigation.js` (+ `main.js` bootstrap) so sticky/mobile/Resume menu behavior matches.
 
 ### Footer (all project pages)
 
-Reuse homepage `.site-footer` structure and dark styling. Links back to homepage anchors (Work, About, Skills, Contact).
+Reuse homepage `.site-footer` structure and dark styling. Links back to homepage anchors (Projects, About, Skills, Contact) via `/#…`.
 
 ### Resume (global rule)
 

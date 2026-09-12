@@ -41,7 +41,7 @@ Use before marking a phase complete or before application submission (Phase 18).
 
 ## FUNCTIONAL
 
-- [ ] Internal anchors (`#work`, `#about`, `#skills`, `#contact`) work
+- [ ] Internal anchors (`/#projects`, `/#about`, `/#skills`, `/#contact`) work
 - [ ] Project page links resolve
 - [ ] Next-project links resolve (only on pages that still include them)
 - [ ] Resume menu offers English CV + 履歴書 + 職務経歴書 View/Download

@@ -2,7 +2,7 @@
 
 The homepage is a **major page**, not a small card grid. Planned sections below.
 
-Anchors: `#work` · `#about` · `#skills` · `#contact`
+Anchors: `/#projects` · `/#about` · `/#skills` · `/#contact`
 
 ---
 

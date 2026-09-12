@@ -111,7 +111,7 @@ Each major project lives at `projects/<slug>/index.html` (clean public URL `/pro
 
 - global header/footer patterns
 - `project.css` section structure
-- relative paths back to `../../css`, `../../js`, `../../assets`, `../../index.html`
+- relative paths back to `../../css`, `../../js`, `../../assets`; homepage nav uses `/`, `/#projects`, etc.
 
 Legacy `projects/<slug>.html` files are tiny redirects to the clean URL (meta refresh + JS + fallback link).
 
@@ -127,9 +127,9 @@ Do **not** include a “Next project” section by default.
 | `/projects/<slug>/index.html` | `../../css/...`, `../../js/...`, `../../assets/...` |
 | `/projects/<slug>.html` (redirect stubs) | no local asset deps |
 
-Anchors on the homepage use `#work`, `#about`, `#skills`, `#contact`.
+Homepage section anchors: `/#projects`, `/#about`, `/#skills`, `/#contact`.
 
-From project pages, homepage anchors use `../../index.html#work` (etc.).
+From project pages, homepage anchors use `/#projects` (etc.).
 
 ## GitHub Pages compatibility
 
@@ -145,7 +145,7 @@ From project pages, homepage anchors use `../../index.html#work` (etc.).
 2. Create `projects/<slug>/index.html` using an existing project page as the template (paths use `../../`)
 3. Add a tiny `projects/<slug>.html` redirect to `/projects/<slug>/`
 4. Add `assets/images/projects/<slug>/`
-5. Add a homepage showcase article in `#work` linking to `projects/<slug>/`
+5. Add a homepage showcase article in `#projects` linking to `projects/<slug>/`
 6. Add the clean URL to `sitemap.xml`
 7. Update `ASSET_PLAN.md` and roadmap status as needed
 8. Do **not** invent URLs or screenshots

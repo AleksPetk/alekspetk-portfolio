@@ -59,7 +59,7 @@ Make the first viewport feel like a real custom portfolio composition.
 - Header visual polish (transparent → scrolled state)
 - Desktop hero layout (left copy / right media)
 - Typography hierarchy for name + eyebrow
-- CTA buttons wired to `#work` / `#contact`
+- CTA buttons wired to `/#projects` / `/#contact`
 - Clean media placeholder ready for later asset swap
 - Mobile header/hero stacking
 
